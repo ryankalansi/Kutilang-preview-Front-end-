@@ -13,6 +13,7 @@
   --font-body: "Nunito Sans", sans-serif;
 }
 
+/* === PERBAIKAN OVERFLOW === */
 html,
 body {
   overflow-x: hidden;
@@ -25,6 +26,56 @@ body {
   font-family: var(--font-body);
   background-color: #f8f9fa;
   color: #495057;
+}
+
+/* === CONTAINER FIXES === */
+.container {
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* === ROW FIXES === */
+.row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.row > * {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 h1,
@@ -91,12 +142,13 @@ h6 {
   transform: translateY(-2px);
 }
 
-/* === HERO SECTION (FINAL) === */
+/* === HERO SECTION === */
 .hero-section {
   padding: 60px 0;
   background: var(--gradient-2);
   color: white;
-  margin-top: 74px; /* Jarak untuk fixed navbar */
+  margin-top: 74px;
+  width: 100%;
 }
 .hero-title {
   color: white;
@@ -106,8 +158,10 @@ h6 {
   color: rgba(255, 255, 255, 0.85);
 }
 .carousel-inner img {
-  aspect-ratio: 4/3; /* Membuat gambar tidak terlalu tinggi di mobile */
+  aspect-ratio: 4/3;
   object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 .btn-secondary-custom {
   background-color: rgba(255, 255, 255, 0.2);
@@ -123,33 +177,10 @@ h6 {
   transform: translateY(-2px);
 }
 
-/* Penyesuaian untuk Desktop View */
-@media (min-width: 992px) {
-  .hero-section {
-    padding: 120px 0;
-    text-align: left; /* Teks rata kiri di desktop */
-  }
-  .carousel-inner img {
-    aspect-ratio: auto; /* Kembalikan rasio aspek gambar di desktop */
-  }
-}
-
-/* Penyesuaian untuk Mobile View */
-@media (max-width: 991.98px) {
-  .hero-section {
-    text-align: center; /* Teks rata tengah di mobile */
-  }
-  .hero-title {
-    font-size: 2.25rem; /* Ukuran judul lebih kecil di mobile */
-  }
-  .hero-subtitle {
-    font-size: 1rem; /* Ukuran subjudul lebih kecil di mobile */
-  }
-}
-
 /* === FEATURES SECTION === */
 .features-section {
   background-color: white;
+  width: 100%;
 }
 .feature-card {
   background-color: #f8f9fa;
@@ -158,6 +189,7 @@ h6 {
   text-align: center;
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  width: 100%;
 }
 .feature-card:hover {
   transform: translateY(-10px);
@@ -192,6 +224,7 @@ h6 {
 /* === SENTRA & VIDEO SECTION === */
 .sentra-video-section {
   background-color: var(--light-pink);
+  width: 100%;
 }
 .sentra-badge {
   font-size: 0.9rem;
@@ -199,6 +232,8 @@ h6 {
   padding: 0.6rem 1.2rem;
   border-radius: 99px;
   color: white;
+  margin: 0.25rem;
+  display: inline-block;
 }
 .badge-purple {
   background-color: var(--primary-purple);
@@ -214,12 +249,13 @@ h6 {
 }
 .badge-pink {
   background-color: #d63384;
-} /* Warna pink tambahan untuk variasi */
+}
 
 /* === CTA SECTION === */
 .cta-section {
   padding: 80px 0;
   background: var(--gradient-1);
+  width: 100%;
 }
 .btn-light-custom {
   background-color: white;
@@ -231,28 +267,28 @@ h6 {
 .btn-light-custom:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  /* 👇 TAMBAHAN KUNCI 👇 */
   background-color: transparent;
   color: white;
-  border: 2px solid white; /* Menambahkan outline agar bentuk tombol tetap terlihat */
+  border: 2px solid white;
 }
 
 /* === FOOTER === */
 .footer-section {
   background-color: var(--primary-blue);
   color: rgba(255, 255, 255, 0.7);
+  width: 100%;
 }
 .footer-logo {
-  max-height: 70px; /* Sedikit diperbesar agar padding muat */
-  background-color: #f8f9fa; /* Memberi latar belakang terang dari palet Anda */
-  border-radius: 12px; /* Membuat sudutnya membulat, terlihat lebih lembut */
-  padding: 10px; /* Memberi jarak antara logo dan tepi badge */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Memberi sedikit efek bayangan agar terangkat */
+  max-height: 70px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
 .footer-logo:hover {
-  transform: scale(1.05); /* Efek zoom halus saat disentuh mouse */
+  transform: scale(1.05);
 }
 
 .footer-title {
@@ -318,4 +354,60 @@ h6 {
 
 .foundation-link:hover {
   color: var(--primary-orange);
+}
+
+/* === RESPONSIVE FIXES === */
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 120px 0;
+    text-align: left;
+  }
+  .carousel-inner img {
+    aspect-ratio: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* === SECTION TITLE SHARED === */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+/* === EXTRA OVERFLOW PREVENTION === */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.d-flex {
+  flex-wrap: wrap;
 }
