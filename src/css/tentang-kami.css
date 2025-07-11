@@ -1,0 +1,289 @@
+:root {
+  --primary-orange: #ff6b35;
+  --primary-purple: #8b5a96;
+  --primary-blue: #13294b;
+  --soft-yellow: #fff3cd;
+  --light-pink: #fcf2ff;
+  --success-green: #28a745;
+  --gradient-1: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+  --gradient-2: linear-gradient(135deg, #8b5a96 0%, #b088c4 100%);
+  --gradient-3: linear-gradient(135deg, #13294b 0%, #2c5282 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+}
+
+/* NAVBAR */
+.logo {
+  max-height: 3.75rem;
+  width: auto;
+}
+
+/* Navbar Container */
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(0.6rem);
+  transition: all 0.3s ease;
+}
+
+/* Navigation Links */
+.nav-link {
+  font-weight: 500;
+  color: var(--primary-blue) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: var(--gradient-1);
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: var(--gradient-2);
+  color: white !important;
+  transform: translateX(5px);
+}
+/* END NAVBAR */
+
+/* ABOUT TITLES */
+.about-title {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  position: relative;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-1);
+  border-radius: 2px;
+}
+
+/* CARD */
+.about-card {
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  background-color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* CARD BORDER LEFT */
+.card-orange {
+  border-left: 5px solid var(--primary-orange);
+}
+
+.card-purple {
+  border-left: 5px solid var(--primary-purple);
+}
+
+.card-blue {
+  border-left: 5px solid var(--primary-blue);
+}
+
+/* TITLES COLORS IN VISI, MISI & TUJUAN */
+.text-orange {
+  color: var(--primary-orange);
+}
+
+.text-purple {
+  color: var(--primary-purple);
+}
+
+.text-blue {
+  color: var(--primary-blue);
+}
+
+/* IMAGE */
+.about-image {
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* HIGHTLIGHT BOX IN FILOSOFI */
+.about-highlight {
+  border-radius: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 2rem;
+  background: var(--gradient-2);
+}
+
+/*LIST STYLING */
+.visi-misi-list {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.visi-misi-list li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.visi-misi-list li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  background: var(--gradient-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GRADIENT */
+.card-purple .visi-misi-list li::before {
+  background: var(--gradient-2);
+}
+.card-blue .visi-misi-list li::before {
+  background: var(--gradient-3);
+}
+
+/* CONTACT SECTION */
+.bg-primary-blue {
+  background-color: var(--primary-blue) !important;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--primary-orange);
+  transform: translateY(-3px);
+}
+
+.contact-link:hover {
+  color: var(--primary-orange) !important;
+}
+
+.contact-link:hover i {
+  color: white !important;
+}
+
+.contact-highlight {
+  color: #ffb6c1;
+}
+/* END CONTACT SECTION */
+
+/* FOOTER */
+.footer-section {
+  background-color: var(--soft-yellow);
+}
+
+.footer-logo {
+  max-height: 60px;
+  width: auto;
+}
+
+.footer-text {
+  color: #4694c5;
+}
+/* END FOOTER */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-card {
+    padding: 25px;
+  }
+
+  .visi-misi-list li {
+    padding-left: 50px;
+    font-size: 1rem;
+  }
+
+  .visi-misi-list li::before {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-orange);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-purple);
+}
