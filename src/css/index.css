@@ -91,7 +91,7 @@ h6 {
 /* === HERO SECTION === */
 .hero-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--tk-blue) 0%, var(--tk-purple) 100%);
+  background: var(--tk-blue);
   color: white;
   margin-top: 74px;
 }
@@ -257,7 +257,7 @@ h6 {
 /* === CTA SECTION === */
 .cta-section {
   padding: 80px 0;
-  background: linear-gradient(135deg, var(--tk-orange) 0%, var(--tk-pink) 100%);
+  background: var(--tk-orange);
 }
 
 .btn-light-custom {
