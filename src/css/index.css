@@ -1,32 +1,32 @@
-/* === FONDASI DESAIN & PERBAIKAN UTAMA === */
+/* === FONDASI DESAIN & PALET WARNA BARU === */
 :root {
-  --primary-orange: #ff6b35;
-  --primary-purple: #8b5a96;
-  --primary-blue: #13294b;
-  --soft-yellow: #fff3cd;
-  --light-pink: #fcf2ff;
-  --success-green: #28a745;
-  --gradient-1: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-  --gradient-2: linear-gradient(135deg, #8b5a96 0%, #b088c4 100%);
-  --gradient-3: linear-gradient(135deg, #13294b 0%, #2c5282 100%);
+  /* Palet Warna Baru TK Kutilang */
+  --tk-blue: #00a2c8; /* Biru Ceria */
+  --tk-pink: #f48fb1; /* Pink Lembut */
+  --tk-orange: #ff6b35; /* Oranye Semangat */
+  --tk-purple: #ce7af4; /* Ungu Kreatif */
+  --tk-yellow: #ffc107; /* Kuning Gembira */
+  --tk-green: #28a745; /* Hijau Alami */
+
+  /* Variabel Pendukung */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
+  --primary-text: #1a202c;
+  --secondary-text: #4a5568;
+  --background-light: #fdfefe;
+  --footer-bg: #1a2c47; /* Biru tua untuk footer */
 }
 
-/* FIX #1: MENGHILANGKAN "GERAKAN" PADA HOVER SECARA TUNTAS */
 html {
   overflow-y: scroll;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #f8f9fa;
-  color: #495057;
-  overflow-x: hidden; /* Mencegah horizontal scroll yang tidak diinginkan */
+  background-color: var(--background-light);
+  color: var(--secondary-text);
+  overflow-x: hidden;
 }
-
-/* KODE YANG DIHAPUS: Blok CSS untuk .container dan .row tidak diperlukan,
-   karena Bootstrap sudah menanganinya. Menambahkannya justru menyebabkan konflik. */
 
 h1,
 h2,
@@ -35,123 +35,130 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  color: var(--primary-blue);
+  color: var(--primary-text);
   font-weight: 700;
 }
 
 /* === NAVBAR === */
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   padding: 0.75rem 0;
 }
+
 .logo {
   max-height: 50px;
 }
+
 .nav-link {
   font-weight: 600;
-  color: var(--primary-blue) !important;
+  color: var(--primary-text) !important;
   padding: 0.5rem 1rem;
   border-radius: 99px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .nav-link:hover {
-  background-color: var(--light-pink);
-}
-.nav-link.active {
-  background-color: var(--primary-orange);
+  background-color: var(--tk-orange);
   color: white !important;
 }
+
+.nav-link.active {
+  background-color: var(--tk-orange);
+  color: white !important;
+}
+
 .dropdown-menu {
   border: none;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
   padding: 0.5rem;
 }
+
 .dropdown-item {
   font-weight: 600;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
+
 .dropdown-item:hover {
-  background-color: var(--primary-purple);
+  background-color: var(--tk-purple);
   color: white;
   transform: translateX(5px);
 }
+
+/* === HERO SECTION === */
+.hero-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--tk-blue) 0%, var(--tk-purple) 100%);
+  color: white;
+  margin-top: 74px;
+}
+
+.hero-title {
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-inner img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
 .btn-primary-custom {
-  background-color: var(--primary-orange);
+  background-color: var(--tk-orange);
   color: white;
   font-weight: 700;
-  padding: 0.6rem 1.5rem;
+  padding: 0.8rem 1.75rem;
   transition: background-color 0.3s, transform 0.3s;
 }
+
 .btn-primary-custom:hover {
   background-color: #e05a2a;
   color: white;
   transform: translateY(-2px);
 }
 
-/* === HERO SECTION === */
-.hero-section {
-  padding: 60px 0;
-  background: var(--gradient-2);
-  color: white;
-  margin-top: 74px;
-}
-.hero-title {
-  color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-.hero-subtitle {
-  color: rgba(255, 255, 255, 0.85);
-}
-.carousel-inner img {
-  aspect-ratio: 4/3;
-  object-fit: cover;
-}
 .btn-secondary-custom {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   font-weight: 700;
   padding: 0.8rem 1.75rem;
   border: 1px solid white;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
+
 .btn-secondary-custom:hover {
   background-color: white;
-  color: var(--primary-purple);
+  color: var(--tk-blue);
   transform: translateY(-2px);
 }
 
-/* Penyesuaian Responsif untuk Hero */
-@media (min-width: 992px) {
-  .hero-section {
-    padding: 120px 0;
-    text-align: left;
-  }
-  .carousel-inner img {
-    aspect-ratio: auto;
-  }
-}
 @media (max-width: 991.98px) {
   .hero-section {
     text-align: center;
   }
-  .hero-title {
-    font-size: 2.25rem;
-  }
-  .hero-subtitle {
-    font-size: 1rem;
-  }
 }
 
-/* === FEATURES SECTION === */
+/* === FEATURES SECTION (TATA NILAI) === */
 .features-section {
   background-color: white;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
+
+.section-title {
+  color: var(--primary-text);
+}
+
+.section-subtitle {
+  color: var(--secondary-text);
+}
+
 .feature-card {
   background-color: #f8f9fa;
   padding: 2rem;
@@ -159,13 +166,15 @@ h6 {
   text-align: center;
   border: 2px solid transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  height: 100%; /* Membuat semua card sama tinggi */
+  height: 100%;
 }
+
 .feature-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary-orange);
+  border-color: var(--tk-orange);
 }
+
 .feature-icon {
   width: 70px;
   height: 70px;
@@ -177,63 +186,89 @@ h6 {
   color: white;
   margin: 0 auto 1.5rem auto;
 }
-.icon-orange {
-  background: var(--gradient-1);
-}
-.icon-purple {
-  background: var(--gradient-2);
-}
-.icon-green {
-  background-color: var(--success-green);
-}
+
 .feature-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 0.75rem;
 }
 
+/* Aplikasi Palet Warna Baru pada Ikon Tata Nilai */
+.icon-nilai-1 {
+  background-color: var(--tk-blue);
+}
+.icon-nilai-2 {
+  background-color: var(--tk-pink);
+}
+.icon-nilai-3 {
+  background-color: var(--tk-orange);
+}
+.icon-nilai-4 {
+  background-color: var(--tk-purple);
+}
+.icon-nilai-5 {
+  background-color: var(--tk-yellow);
+}
+.icon-nilai-6 {
+  background-color: var(--tk-green);
+}
+.icon-nilai-7 {
+  background-color: #0d6efd;
+} /* Bootstrap primary blue untuk variasi */
+
 /* === SENTRA & VIDEO SECTION === */
 .sentra-video-section {
-  background-color: var(--light-pink);
-  padding-top: 80px;
-  padding-bottom: 80px;
+  background-color: #f0f6ff; /* Latar belakang biru sangat muda */
+  padding: 80px 0;
 }
+
 .sentra-badge {
   font-size: 0.9rem;
   font-weight: 700;
   padding: 0.6rem 1.2rem;
   border-radius: 99px;
   color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.badge-purple {
-  background-color: var(--primary-purple);
+
+/* Aplikasi Palet Warna Baru pada Badge Sentra */
+.badge-bahan-alam {
+  background-color: var(--tk-green);
 }
-.badge-green {
-  background-color: var(--success-green);
+.badge-seni {
+  background-color: var(--tk-pink);
 }
-.badge-orange {
-  background-color: var(--primary-orange);
+.badge-balok {
+  background-color: var(--tk-blue);
 }
-.badge-blue {
-  background-color: var(--primary-blue);
+.badge-persiapan {
+  background-color: var(--tk-yellow);
+  color: #333;
+} /* Teks gelap untuk kontras */
+.badge-imtaq {
+  background-color: #6f42c1;
+} /* Ungu gelap */
+.badge-peran {
+  background-color: var(--tk-purple);
 }
-.badge-pink {
-  background-color: #d63384;
+.badge-memasak {
+  background-color: var(--tk-orange);
 }
 
 /* === CTA SECTION === */
 .cta-section {
   padding: 80px 0;
-  background: var(--gradient-1);
+  background: linear-gradient(135deg, var(--tk-orange) 0%, var(--tk-pink) 100%);
 }
+
 .btn-light-custom {
   background-color: white;
-  color: var(--primary-orange);
+  color: var(--tk-orange);
   font-weight: 700;
   padding: 1rem 2.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
   border: 2px solid transparent;
 }
+
 .btn-light-custom:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -244,9 +279,10 @@ h6 {
 
 /* === FOOTER === */
 .footer-section {
-  background-color: var(--primary-blue);
+  background-color: var(--footer-bg);
   color: rgba(255, 255, 255, 0.7);
 }
+
 .footer-logo {
   max-height: 70px;
   background-color: white;
@@ -255,37 +291,43 @@ h6 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
+
 .footer-logo:hover {
   transform: scale(1.05);
 }
+
 .footer-title {
-  font-family: var(--font-heading);
   color: white;
-  font-weight: 700;
   margin-bottom: 1rem;
 }
+
 .footer-links li {
   margin-bottom: 0.5rem;
 }
+
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s, padding-left 0.3s;
 }
+
 .footer-links a:hover {
   color: white;
   padding-left: 5px;
 }
+
 .footer-contact li {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.75rem;
 }
+
 .footer-contact i {
   margin-right: 0.75rem;
   margin-top: 5px;
-  color: var(--primary-orange);
+  color: var(--tk-orange);
 }
+
 .social-icon {
   width: 40px;
   height: 40px;
@@ -298,19 +340,27 @@ h6 {
   text-decoration: none;
   transition: background-color 0.3s, transform 0.3s;
 }
+
 .social-icon:hover {
-  background-color: var(--primary-orange);
+  background-color: var(--tk-orange);
   transform: translateY(-3px);
 }
+
 .footer-divider {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+
+.footer-links a:hover {
+  color: var(--tk-orange);
+}
+
 .footer-copyright {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
 }
+
 .foundation-link {
   color: white;
   font-weight: 600;
@@ -318,6 +368,7 @@ h6 {
   border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
   transition: color 0.3s ease;
 }
+
 .foundation-link:hover {
-  color: var(--primary-orange);
+  color: var(--tk-orange);
 }
