@@ -1,20 +1,26 @@
 /* === FONDASI DESAIN & PALET WARNA BARU === */
 :root {
   /* Palet Warna Baru TK Kutilang */
-  --tk-blue: #00a2c8; /* Biru Ceria */
+  --tk-blue: #00b4d8; /* Biru Ceria */
   --tk-pink: #f48fb1; /* Pink Lembut */
-  --tk-orange: #ff6b35; /* Oranye Semangat */
-  --tk-purple: #ce7af4; /* Ungu Kreatif */
-  --tk-yellow: #ffc107; /* Kuning Gembira */
+  --tk-orange: #ff7c18; /* Oranye Semangat */
+  --tk-purple: #b97bd9; /* Ungu Kreatif */
+  --tk-yellow: #ff9e00; /* Kuning Gembira */
   --tk-green: #28a745; /* Hijau Alami */
 
   /* Variabel Pendukung */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
-  --primary-text: #1a202c;
+  --primary-text: #13294b;
   --secondary-text: #4a5568;
   --background-light: #fdfefe;
   --footer-bg: #1a2c47; /* Biru tua untuk footer */
+  --accent-orange: linear-gradient(
+    135deg,
+    var(--tk-orange) 0%,
+    var(--tk-yellow) 100%
+  );
+  --accent-purple: linear-gradient(135deg, #b97bd9 0%, #a86cc7 100%);
 }
 
 html {
@@ -59,12 +65,12 @@ h6 {
 }
 
 .nav-link:hover {
-  background-color: var(--tk-orange);
+  background: var(--accent-orange);
   color: white !important;
 }
 
 .nav-link.active {
-  background-color: var(--tk-orange);
+  background: var(--accent-orange);
   color: white !important;
 }
 
@@ -83,7 +89,7 @@ h6 {
 }
 
 .dropdown-item:hover {
-  background-color: var(--tk-purple);
+  background: var(--accent-purple);
   color: white;
   transform: translateX(5px);
 }
@@ -111,7 +117,7 @@ h6 {
 }
 
 .btn-primary-custom {
-  background-color: var(--tk-orange);
+  background-color: var(--tk-yellow);
   color: white;
   font-weight: 700;
   padding: 0.8rem 1.75rem;
@@ -119,7 +125,7 @@ h6 {
 }
 
 .btn-primary-custom:hover {
-  background-color: #e05a2a;
+  background: var(--tk-yellow);
   color: white;
   transform: translateY(-2px);
 }
@@ -257,7 +263,7 @@ h6 {
 /* === CTA SECTION === */
 .cta-section {
   padding: 80px 0;
-  background: var(--tk-orange);
+  background: var(--tk-yellow);
 }
 
 .btn-light-custom {

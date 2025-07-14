@@ -3,36 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tk Kutilang | Tentang Kami</title>
+    <title>TK Kutilang | Tentang Kami</title>
     <meta
       name="description"
-      content="Mengenal lebih dekat TK Kutilang - latar belakang, filosofi, visi, misi, dan tujuan Tk Kutilang."
+      content="Mengenal lebih dekat TK Kutilang - latar belakang, filosofi, visi, misi, dan tujuan."
     />
 
-    <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
-    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
-    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../../src/css/tentang-kami.css" />
-
-    <!-- FAVICON -->
     <link
       rel="icon"
       href="../../Assets/img/Favicon.jpg"
@@ -40,487 +35,361 @@
       sizes="32x32"
     />
   </head>
-
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="../../index.html">
-          <img
-            src="../../Assets/img/Logo.png"
-            alt="TK Kutilang Logo"
-            class="img-fluid logo"
-          />
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 rounded-pill" href="../../index.html"
-                >Beranda</a
-              >
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tentang Kami
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="tentang-kami.html#latar-belakang"
-                    >Latar Belakang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="tentang-kami.html#filosofi"
-                    >Filosofi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="tentang-kami.html#visi-misi-tujuan"
-                    >Visi, Misi, dan Tujuan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#poma"
-                    >POMA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#fieldtrip"
-                    >Fieldtrip</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#berenang"
-                    >Berenang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#kelas-musik"
-                    >Kelas Musik</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#sehari-bersama-ayah"
-                    >Sehari Bersama Ayah</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#minum-teh-bersama-ibu"
-                    >Minum Teh Bersama Ibu</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#storytelling"
-                    >Storytelling</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#pendidikan-makanan"
-                    >Pendidikan Makanan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Metode
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#bahan-alam"
-                    >Sentra Bahan Alam</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#seni"
-                    >Sentra Seni</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#balok"
-                    >Sentra Balok</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#persiapan"
-                    >Sentra Persiapan</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#imtaq"
-                    >Sentra Imtaq</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#peran"
-                    >Sentra Peran</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#kelas-memasak"
-                    >Kelas Memasak</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../metode/metode.html#kurikulum"
-                    >Kurikulum</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link px-3 py-2 rounded-pill"
-                href="../../cara-mendaftar.html"
-                >Cara Mendaftar</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link px-3 py-2 rounded-pill"
-                href="../../kontak.html"
-                >Kontak</a
-              >
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="../../Assets/img/Logo.png"
+              alt="TK Kutilang Logo"
+              class="img-fluid logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto gap-1">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Tentang Kami</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="tentang-kami.html#latar-belakang"
+                      >Latar Belakang</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="tentang-kami.html#filosofi"
+                      >Filosofi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="tentang-kami.html#visi-misi-tujuan"
+                      >Visi, Misi & Tujuan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Program</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../program/program.html#poma"
+                      >POMA</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#fieldtrip"
+                      >Fieldtrip</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#berenang"
+                      >Berenang</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#kelas-musik"
+                      >Kelas Musik</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#sehari-bersama-ayah"
+                      >Sehari Bersama Ayah</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#minum-teh-bersama-ibu"
+                      >Minum Teh Bersama Ibu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#storytelling"
+                      >Storytelling</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#pendidikan-makanan"
+                      >Pendidikan Makanan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Metode Sentra</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../metode/metode.html#bahan-alam"
+                      >Sentra Bahan Alam</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../metode/metode.html#seni"
+                      >Sentra Seni</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../metode/metode.html#balok"
+                      >Sentra Balok</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../metode/metode.html#persiapan"
+                      >Sentra Persiapan</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../metode/metode.html#imtaq"
+                      >Sentra Imtaq</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../metode/metode.html#peran"
+                      >Sentra Peran</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../metode/metode.html#kelas-memasak"
+                      >Kelas Memasak</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../cara-mendaftar.html"
+                  >Cara Mendaftar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../kontak.html">Hubungi Kami</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
+      </nav>
+    </header>
 
-    <!-- TENTANG KAMI SECTIONS -->
-    <section class="about-section py-5 bg-light" id="latar-belakang">
-      <div class="container">
-        <h2 class="about-title text-center mt-5 mb-4">Latar Belakang</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="about-card card-orange">
-              <p class="fs-5 mb-4">
+    <main>
+      <section id="latar-belakang" class="content-section py-5">
+        <div class="container mt-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+              <img
+                src="https://images.unsplash.com/photo-1567746512136-f005499a7575?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Anak-anak belajar bersama"
+                class="img-fluid rounded-4 shadow-lg"
+              />
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <h2 class="section-title-sub">Latar Belakang</h2>
+              <p>
                 Sekolah TK-KUTILANG merupakan wujud keprihatinan dan kepedulian
                 yayasan Rumah Perubahan ketika melihat banyaknya anak-anak usia
                 balita yang belum mendapatkan kesempatan pendidikan usia dini di
                 sekitar perumahan Jatimurni, Pondok Melati.
               </p>
-              <p class="fs-5 mb-0">
+              <p>
                 Maka Yayasan Rumah Perubahan mendirikan sekolah
                 <strong>TK Kutilang</strong> sebagai bentuk kontribusi nyata
                 dalam meningkatkan kualitas pendidikan anak usia dini di wilayah
                 Bekasi.
               </p>
-              <div class="text-center mt-4">
-                <div class="row">
-                  <div class="col-md-8 mx-auto">
-                    <img
-                      src="../../Assets/img/metode/balok/balok2.jpg"
-                      alt="Karya Anak TK Kutilang"
-                      class="img-fluid about-image rounded shadow-sm"
-                    />
-                    <p class="mt-3 text-muted fst-italic mb-0">
-                      Karya kreatif anak-anak TK Kutilang
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="about-section py-5 bg-white" id="filosofi">
-      <div class="container">
-        <h2 class="about-title text-center mt-5 mb-4">Filosofi</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="about-card card-purple">
-              <p class="fs-5 mb-4">
-                Sekolah TK Kutilang merupakan lembaga pendidikan yang sistemnya
-                sangat mendukung anak dan keluarga. Seluruh program pendidikan
-                disusun sedemikian rupa untuk memenuhi kebutuhan setiap anak
-                yang unik. Semua permainan maupun media pendidikan dirancang
-                untuk membantu anak agar dapat mencapai tingkat perkembangan
-                anak yang optimal pada tahap usia dini.
-              </p>
-              <div
-                class="about-highlight rounded text-white text-center mt-4 px-4 py-4 shadow-sm"
-              >
-                <i class="bi bi-star-fill fs-2 mb-3 d-block"></i>
-                <p class="mb-0 fs-5 fw-semibold">
-                  Diberi nama Kutilang, bukan singkatan melainkan harapan yang
-                  disematkan.<br />
-                  Semoga kutilang-kutilang kecil itu nanti bisa tumbuh besar
-                  menjadi rajawali-rajawali hebat. Rajawali yang akan terbang
-                  tinggi mengarungi luasnya alam, lalu kembali turun untuk
-                  membangun kehidupan.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section py-5 bg-light" id="visi-misi-tujuan">
-      <div class="container">
-        <h2 class="about-title text-center mt-5 mb-4">Visi, Misi & Tujuan</h2>
-        <div class="row g-4 mt-4">
-          <div class="col-lg-4 col-md-6">
-            <div class="about-card card-orange h-100">
-              <h3 class="text-orange">
-                <i class="bi bi-eye-fill me-2"></i>Visi
-              </h3>
-              <p class="mb-3">TK KUTILANG memiliki visi:</p>
-              <ol class="visi-misi-list">
-                <li>
-                  Membangun manusia berkarakter dan berkepribadian kuat: yang
-                  bertanggung jawab, berintegritas, adaptif, fleksibel, dan
-                  kritis.
-                </li>
-                <li>
-                  Membangun komunitas mandiri dan merdeka sehingga terbentuk
-                  masyarakat yang sejahtera dan membangun dunia yang lebih baik.
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="about-card card-purple h-100">
-              <h3 class="text-purple">
-                <i class="bi bi-bullseye me-2"></i>Misi
-              </h3>
-              <p class="mb-3">
-                Sebagai sekolah sentra, TK KUTILANG mendukung misi akademis ini
-                dengan:
-              </p>
-              <ol class="visi-misi-list">
-                <li>
-                  Menciptakan sarana belajar terbaik untuk menggali potensi
-                  anak.
-                </li>
-                <li>
-                  Memberikan pendidikan efektif dan berkualitas bagi anak-anak
-                  usia dini.
-                </li>
-              </ol>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="about-card card-blue h-100">
-              <h3 class="text-blue">
-                <i class="bi bi-flag-fill me-2"></i>Tujuan
-              </h3>
-              <p class="mb-3">TK KUTILANG memiliki tujuan:</p>
-              <ol class="visi-misi-list">
-                <li>
-                  Mendidik anak bangsa berbudi luhur, berakhlak, dan
-                  berkepribadian Indonesia.
-                </li>
-                <li>
-                  Menumbuhkan anak yang mampu beradaptasi dan menjadi pribadi
-                  sukses.
-                </li>
-                <li>
-                  Membekali anak usia 3–6 tahun dengan keterampilan dasar
-                  sebelum masuk SD.
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END TENTANG KAMI SECTIONS -->
-
-    <!-- CONTACT SECTION -->
-    <section class="contact py-5 bg-primary-blue text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="contact-card p-4 rounded-3">
-              <div class="row">
-                <div class="col-md-6">
-                  <h3 class="mb-4">
-                    <span class="contact-highlight">TK Kutilang</span>
-                  </h3>
-                  <div class="mb-3">
-                    <i class="bi bi-geo-alt-fill me-2"></i>
-                    <strong>Alamat:</strong><br />
-                    Jalan Sanwani No 1 Rt.002 Rw.008 Jatimurni Pondok Melati,
-                    Kota Bekasi, 17431
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-telephone-fill me-2"></i>
-                    <strong>Telepon:</strong> (021) 1234567
-                  </div>
-                  <div class="mb-4">
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    <strong>Email:</strong>
-                    <a
-                      href="mailto:kutilang@gmail.com"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      kutilang@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="mb-3">Ikuti Kami</h5>
-                  <div class="mb-4 d-flex gap-3">
-                    <a
-                      href="#"
-                      title="Instagram"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@paud-tkkutilangrumahperuba5183"
-                      title="YouTube"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-youtube"></i>
-                    </a>
-                    <a
-                      href="#"
-                      title="Facebook"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-clock-fill me-2"></i>
-                    <strong>Jam Operasional:</strong><br />
-                    Senin - Jumat: 07:00 - 15:00<br />
-                  </div>
-                  <p class="mb-0">
-                    <a
-                      href="https://rumahperubahan.com/"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      <i class="bi bi-house-fill me-2"></i>Rumah Perubahan
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END CONTACT SECTION -->
-
-    <!-- FOOTER -->
-    <footer class="footer-section py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Logo -->
-          <div class="col-md-6 text-center text-md-start">
-            <a href="../../index.html#heroCarousel">
+      <section id="filosofi" class="content-section py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2" data-aos="fade-left">
               <img
-                src="../../Assets/img/Logo.png"
-                alt="TK Kutilang Logo"
-                class="footer-logo img-fluid"
+                src="https://images.unsplash.com/photo-1727085244063-9815c11ab904?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Filosofi Burung Kutilang"
+                class="img-fluid rounded-4 shadow-lg"
               />
-            </a>
-          </div>
-          <!-- Copyright -->
-          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-            <p class="mb-0 fw-semibold footer-text">© 2025 TK Kutilang.</p>
+            </div>
+            <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+              <h2 class="section-title-sub">Filosofi Kami</h2>
+              <p>
+                Semua program pendidikan disusun untuk memenuhi kebutuhan setiap
+                anak yang unik. Permainan maupun media pendidikan dirancang
+                untuk membantu anak mencapai tingkat perkembangan yang optimal.
+              </p>
+              <blockquote class="blockquote mt-4 p-4 rounded-3 quote-purple">
+                <p class="mb-3 fst-italic">
+                  "Diberi nama Kutilang, bukan singkatan melainkan harapan yang
+                  disematkan. Semoga kutilang-kutilang kecil itu nanti bisa
+                  tumbuh besar menjadi rajawali-rajawali hebat."
+                </p>
+                <footer class="blockquote-footer text-white">
+                  Rumah Perubahan
+                </footer>
+              </blockquote>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
-    <!-- END FOOTER -->
+      </section>
 
-    <!-- BOOTSTRAP JS -->
+      <section id="visi-misi-tujuan" class="content-section py-5">
+        <div class="container">
+          <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto" data-aos="fade-up">
+              <h2 class="section-title-sub">Visi, Misi & Tujuan</h2>
+              <p class="section-subtitle">
+                Landasan dan arah gerak pendidikan di TK Kutilang.
+              </p>
+            </div>
+          </div>
+          <div class="row g-4">
+            <div
+              class="col-lg-4 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="card h-100 card-vision">
+                <div class="card-header text-white">
+                  <i class="bi bi-eye-fill me-2"></i>Visi Kami
+                  <div class="progress-indicator">
+                    <div class="progress-bar-animated"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="modern-list">
+                    <li>
+                      Membangun manusia berkarakter dan berkepribadian kuat:
+                      bertanggung jawab, berintegritas, adaptif, fleksibel, dan
+                      kritis.
+                    </li>
+                    <li>
+                      Membangun komunitas mandiri dan merdeka sehingga terbentuk
+                      masyarakat yang sejahtera.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="card h-100 card-mission">
+                <div class="card-header text-white">
+                  <i class="bi bi-bullseye me-2"></i>Misi Kami
+                  <div class="progress-indicator">
+                    <div class="progress-bar-animated"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="modern-list">
+                    <li>
+                      Menciptakan sarana belajar terbaik untuk menggali potensi
+                      setiap anak.
+                    </li>
+                    <li>
+                      Memberikan pendidikan yang efektif dan berkualitas bagi
+                      anak usia dini.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="card h-100 card-goal">
+                <div class="card-header text-white">
+                  <i class="bi bi-flag-fill me-2"></i>Tujuan Kami
+                  <div class="progress-indicator">
+                    <div class="progress-bar-animated"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="modern-list">
+                    <li>
+                      Mendidik anak bangsa berbudi luhur dan berakhlak mulia.
+                    </li>
+                    <li>
+                      Menumbuhkan anak yang mampu beradaptasi dan menjadi
+                      pribadi sukses.
+                    </li>
+                    <li>
+                      Membekali anak dengan keterampilan dasar sebelum masuk ke
+                      jenjang SD.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section pt-5 pb-4"></footer>
+
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
-      integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false, // Animasi hanya berjalan sekali
+      });
+    </script>
   </body>
 </html>
