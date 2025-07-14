@@ -92,45 +92,6 @@
   border-left-color: var(--tk-green);
 }
 
-/* Carousel enhancements */
-.carousel {
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 3rem;
-  height: 3rem;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-control-prev {
-  left: 1rem;
-}
-
-.carousel-control-next {
-  right: 1rem;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 60%;
-  filter: invert(1);
-}
-
 /* Responsive improvements */
 @media (max-width: 991.98px) {
   .program-section {

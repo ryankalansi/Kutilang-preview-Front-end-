@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TK KUTILANG | Program</title>
+    <title>TK Kutilang - Tumbuh Ceria, Belajar Penuh Makna</title>
     <meta
       name="description"
-      content="Berbagai program unggulan TK Kutilang untuk mendukung tumbuh kembang anak secara optimal."
+      content="TK Kutilang menawarkan pendidikan anak usia dini dengan metode sentra yang modern dan kreatif di lingkungan yang aman dan mendukung."
     />
 
     <link
@@ -15,29 +15,25 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../../src/css/program.css" />
-
-    <!-- Favicon -->
     <link
       rel="icon"
-      href="../../Assets/img/Favicon.jpg"
+      href="Assets/img/Favicon.jpg"
       type="image/jpg"
       sizes="32x32"
     />
   </head>
-
   <body>
     <header>
       <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
@@ -100,46 +96,56 @@
                 >
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="program.html#poma">POMA</a>
+                    <a class="dropdown-item" href="../program/program.html#poma"
+                      >POMA</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="program.html#fieldtrip"
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#fieldtrip"
                       >Fieldtrip</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="program.html#berenang"
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#berenang"
                       >Berenang</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="program.html#kelas-musik"
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#kelas-musik"
                       >Kelas Musik</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="program.html#sehari-bersama-ayah"
+                      href="../program/program.html#sehari-bersama-ayah"
                       >Sehari Bersama Ayah</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="program.html#minum-teh-bersama-ibu"
+                      href="../program/program.html#minum-teh-bersama-ibu"
                       >Minum Teh Bersama Ibu</a
                     >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="program.html#storytelling"
+                    <a
+                      class="dropdown-item"
+                      href="../program/program.html#storytelling"
                       >Storytelling</a
                     >
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="program.html#pendidikan-makanan"
+                      href="../program/program.html#pendidikan-makanan"
                       >Pendidikan Makanan</a
                     >
                   </li>
@@ -212,7 +218,7 @@
 
     <main>
       <section id="poma" class="program-section">
-        <div class="container">
+        <div class="container mt-5">
           <div class="row align-items-center g-5">
             <div
               class="col-lg-6 order-2 order-lg-1"
@@ -221,10 +227,10 @@
             >
               <div
                 id="carouselPoma"
-                class="carousel slide"
+                class="carousel slide shadow-lg rounded-4"
                 data-bs-ride="carousel"
               >
-                <div class="carousel-inner">
+                <div class="carousel-inner rounded-4">
                   <div class="carousel-item active">
                     <img
                       src="../../Assets/img/program/poma/IMG_2757.webp"
@@ -253,7 +259,11 @@
                   data-bs-target="#carouselPoma"
                   data-bs-slide="prev"
                 >
-                  <span class="carousel-control-prev-icon"></span>
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Previous</span>
                 </button>
                 <button
                   class="carousel-control-next"
@@ -261,7 +271,11 @@
                   data-bs-target="#carouselPoma"
                   data-bs-slide="next"
                 >
-                  <span class="carousel-control-next-icon"></span>
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Next</span>
                 </button>
               </div>
             </div>
@@ -667,112 +681,97 @@
       </section>
     </main>
 
-    <!-- CONTACT SECTION -->
-    <section class="contact py-5 bg-primary-blue text-white">
+    <footer class="footer-section pt-5 pb-4">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="contact-card p-4 rounded-3">
-              <div class="row">
-                <div class="col-md-6">
-                  <h3 class="mb-4">
-                    <span class="contact-highlight">TK Kutilang</span>
-                  </h3>
-                  <div class="mb-3">
-                    <i class="bi bi-geo-alt-fill me-2"></i>
-                    <strong>Alamat:</strong><br />
-                    Jalan Sanwani No 1 Rt.002 Rw.008 Jatimurni Pondok Melati,
-                    Kota Bekasi, 17431
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-telephone-fill me-2"></i>
-                    <strong>Telepon:</strong> (021) 1234567
-                  </div>
-                  <div class="mb-4">
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    <strong>Email:</strong>
-                    <a
-                      href="mailto:kutilang@gmail.com"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      kutilang@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="mb-3">Ikuti Kami</h5>
-                  <div class="mb-4 d-flex gap-3">
-                    <a
-                      href="#"
-                      title="Instagram"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@paud-tkkutilangrumahperuba5183"
-                      title="YouTube"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-youtube"></i>
-                    </a>
-                    <a
-                      href="#"
-                      title="Facebook"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-clock-fill me-2"></i>
-                    <strong>Jam Operasional:</strong><br />
-                    Senin - Jumat: 07:00 - 15:00<br />
-                  </div>
-                  <p class="mb-0">
-                    <a
-                      href="https://rumahperubahan.com/"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      <i class="bi bi-house-fill me-2"></i>Rumah Perubahan
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END CONTACT SECTION -->
-
-    <!-- FOOTER -->
-    <footer class="footer-section py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Logo -->
-          <div class="col-md-6 text-center text-md-start">
-            <a href="../../index.html#heroCarousel">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="#">
               <img
                 src="../../Assets/img/Logo.png"
-                alt="TK Kutilang Logo"
-                class="footer-logo img-fluid"
+                alt="Logo TK Kutilang"
+                class="footer-logo mb-3"
               />
             </a>
+            <p class="footer-text">
+              Membangun generasi cerdas, kreatif, dan berakhlak mulia melalui
+              pendidikan yang berpusat pada anak.
+            </p>
+            <div class="footer-foundation mt-3 mb-3">
+              <p
+                class="mb-1"
+                style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.5)"
+              >
+                Bagian dari:
+              </p>
+              <a
+                href="https://rumahperubahan.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="foundation-link"
+              >
+                Rumah Perubahan
+              </a>
+            </div>
+            <div class="d-flex gap-2">
+              <a
+                href="https://www.instagram.com/tkkutilang_rumahperubahan/"
+                class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/your-channel-id"
+                class="social-icon"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
           </div>
-          <!-- Copyright -->
-          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-            <p class="mb-0 fw-semibold footer-text">© 2025 TK Kutilang.</p>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Navigasi</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Beranda</a></li>
+              <li>
+                <a href="../tentangkami/tentang-kami.html">Tentang Kami</a>
+              </li>
+              <li><a href="../program/program.html">Program</a></li>
+              <li><a href="../metode/metode.html">Metode</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Pendaftaran</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="../../cara-mendaftar.html">Cara Mendaftar</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="footer-title">Hubungi Kami</h5>
+            <ul class="list-unstyled footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Jalan Sanwani No 1,
+                Jatimurni, Kota Bekasi
+              </li>
+              <li><i class="bi bi-telephone-fill"></i> (021) 84300213</li>
+              <li>
+                <i class="bi bi-envelope-fill"></i> info@tkkutilang.sch.id
+              </li>
+            </ul>
           </div>
         </div>
+        <hr class="footer-divider" />
+        <div class="text-center footer-copyright">© 2025 TK Kutilang ❤</div>
       </div>
     </footer>
-    <!-- END FOOTER -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false, // Animasi hanya berjalan sekali
+      });
+    </script>
   </body>
 </html>
