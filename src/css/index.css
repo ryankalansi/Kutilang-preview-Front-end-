@@ -1,20 +1,20 @@
 /* === FONDASI DESAIN & PALET WARNA BARU === */
 :root {
-  /* Palet Warna Baru TK Kutilang */
-  --tk-blue: #00b4d8; /* Biru Ceria */
-  --tk-pink: #f48fb1; /* Pink Lembut */
-  --tk-orange: #ff7c18; /* Oranye Semangat */
-  --tk-purple: #b97bd9; /* Ungu Kreatif */
-  --tk-yellow: #ff9e00; /* Kuning Gembira */
-  --tk-green: #28a745; /* Hijau Alami */
+  /* Palet Warna Anda */
+  --tk-blue: #00b4d8;
+  --tk-pink: #f48fb1;
+  --tk-orange: #ff7c18;
+  --tk-purple: #b97bd9;
+  --tk-yellow: #ff9e00;
+  --tk-green: #28a745;
 
   /* Variabel Pendukung */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
-  --primary-text: #13294b;
+  --primary-text: #13294b; /* Biru sangat gelap untuk teks */
   --secondary-text: #4a5568;
   --background-light: #fdfefe;
-  --footer-bg: #1a2c47; /* Biru tua untuk footer */
+  --footer-bg: #1a2c47;
   --accent-orange: linear-gradient(
     135deg,
     var(--tk-orange) 0%,
@@ -23,6 +23,7 @@
   --accent-purple: linear-gradient(135deg, #b97bd9 0%, #a86cc7 100%);
 }
 
+/* === PENGATURAN DASAR & FIX === */
 html {
   overflow-y: scroll;
 }
@@ -48,88 +49,71 @@ h6 {
 /* === NAVBAR === */
 .navbar {
   background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 0.75rem 0;
+  backdrop-filter: blur(0.625rem); /* 10px -> 0.625rem */
 }
-
 .logo {
-  max-height: 50px;
+  max-height: 3.125rem; /* 50px -> 3.125rem */
 }
-
 .nav-link {
   font-weight: 600;
   color: var(--primary-text) !important;
   padding: 0.5rem 1rem;
-  border-radius: 99px;
+  border-radius: 0.75rem; /* 12px -> 0.75rem */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-.nav-link:hover {
-  background: var(--accent-orange);
-  color: white !important;
-}
-
+.nav-link:hover,
 .nav-link.active {
   background: var(--accent-orange);
   color: white !important;
 }
-
 .dropdown-menu {
   border: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.08); /* Konversi ke rem */
   border-radius: 1rem;
   padding: 0.5rem;
 }
-
 .dropdown-item {
   font-weight: 600;
   padding: 0.75rem 1rem;
   border-radius: 0.75rem;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
 }
-
 .dropdown-item:hover {
   background: var(--accent-purple);
   color: white;
-  transform: translateX(5px);
+  transform: translateX(5px); /* px cocok untuk transform kecil */
 }
 
 /* === HERO SECTION === */
 .hero-section {
-  padding: 80px 0;
+  padding: 5rem 0; /* 80px -> 5rem */
   background: var(--tk-blue);
   color: white;
-  margin-top: 74px;
+  margin-top: 4.625rem; /* 74px -> 4.625rem */
 }
-
 .hero-title {
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
-
 .hero-subtitle {
   color: rgba(255, 255, 255, 0.9);
 }
-
 .carousel-inner img {
   aspect-ratio: 4/3;
   object-fit: cover;
 }
-
 .btn-primary-custom {
   background-color: var(--tk-yellow);
   color: white;
   font-weight: 700;
   padding: 0.8rem 1.75rem;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  border: none;
 }
-
 .btn-primary-custom:hover {
-  background: var(--tk-yellow);
-  color: white;
+  background-color: var(--tk-yellow);
   transform: translateY(-2px);
 }
-
 .btn-secondary-custom {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
@@ -138,13 +122,11 @@ h6 {
   border: 1px solid white;
   transition: all 0.3s ease;
 }
-
 .btn-secondary-custom:hover {
   background-color: white;
   color: var(--tk-blue);
   transform: translateY(-2px);
 }
-
 @media (max-width: 991.98px) {
   .hero-section {
     text-align: center;
@@ -153,37 +135,32 @@ h6 {
 
 /* === FEATURES SECTION (TATA NILAI) === */
 .features-section {
+  padding: 5rem 0;
   background-color: white;
-  padding: 80px 0;
 }
-
 .section-title {
   color: var(--primary-text);
 }
-
 .section-subtitle {
   color: var(--secondary-text);
 }
-
 .feature-card {
   background-color: #f8f9fa;
   padding: 2rem;
   border-radius: 1.5rem;
   text-align: center;
   border: 2px solid transparent;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
   height: 100%;
 }
-
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.08);
   border-color: var(--tk-orange);
 }
-
 .feature-icon {
-  width: 70px;
-  height: 70px;
+  width: 4.375rem; /* 70px */
+  height: 4.375rem; /* 70px */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -192,12 +169,10 @@ h6 {
   color: white;
   margin: 0 auto 1.5rem auto;
 }
-
 .feature-title {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
 }
-
 /* Aplikasi Palet Warna Baru pada Ikon Tata Nilai */
 .icon-nilai-1 {
   background-color: var(--tk-blue);
@@ -219,14 +194,13 @@ h6 {
 }
 .icon-nilai-7 {
   background-color: #0d6efd;
-} /* Bootstrap primary blue untuk variasi */
+}
 
 /* === SENTRA & VIDEO SECTION === */
 .sentra-video-section {
-  background-color: #f0f6ff; /* Latar belakang biru sangat muda */
-  padding: 80px 0;
+  background-color: #f0f6ff;
+  padding: 5rem 0;
 }
-
 .sentra-badge {
   font-size: 0.9rem;
   font-weight: 700;
@@ -235,8 +209,6 @@ h6 {
   color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Aplikasi Palet Warna Baru pada Badge Sentra */
 .badge-bahan-alam {
   background-color: var(--tk-green);
 }
@@ -249,10 +221,10 @@ h6 {
 .badge-persiapan {
   background-color: var(--tk-yellow);
   color: #333;
-} /* Teks gelap untuk kontras */
+}
 .badge-imtaq {
   background-color: #6f42c1;
-} /* Ungu gelap */
+}
 .badge-peran {
   background-color: var(--tk-purple);
 }
@@ -262,10 +234,9 @@ h6 {
 
 /* === CTA SECTION === */
 .cta-section {
-  padding: 80px 0;
+  padding: 5rem 0;
   background: var(--tk-yellow);
 }
-
 .btn-light-custom {
   background-color: white;
   color: var(--tk-orange);
@@ -274,7 +245,6 @@ h6 {
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
-
 .btn-light-custom:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -288,55 +258,45 @@ h6 {
   background-color: var(--footer-bg);
   color: rgba(255, 255, 255, 0.7);
 }
-
 .footer-logo {
-  max-height: 70px;
+  max-height: 4.375rem; /* 70px */
   background-color: white;
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 0.75rem;
+  padding: 0.625rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
-
 .footer-logo:hover {
   transform: scale(1.05);
 }
-
 .footer-title {
   color: white;
   margin-bottom: 1rem;
 }
-
 .footer-links li {
   margin-bottom: 0.5rem;
 }
-
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s, padding-left 0.3s;
 }
-
 .footer-links a:hover {
-  color: white;
-  padding-left: 5px;
+  color: var(--tk-orange);
 }
-
 .footer-contact li {
   display: flex;
   align-items: flex-start;
   margin-bottom: 0.75rem;
 }
-
 .footer-contact i {
   margin-right: 0.75rem;
   margin-top: 5px;
   color: var(--tk-orange);
 }
-
 .social-icon {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem; /* 40px */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
@@ -344,29 +304,20 @@ h6 {
   justify-content: center;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
-
 .social-icon:hover {
   background-color: var(--tk-orange);
   transform: translateY(-3px);
 }
-
 .footer-divider {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
 }
-
-.footer-links a:hover {
-  color: var(--tk-orange);
-}
-
 .footer-copyright {
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.5);
 }
-
 .foundation-link {
   color: white;
   font-weight: 600;
@@ -374,7 +325,6 @@ h6 {
   border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
   transition: color 0.3s ease;
 }
-
 .foundation-link:hover {
   color: var(--tk-orange);
 }
