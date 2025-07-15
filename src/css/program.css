@@ -29,6 +29,11 @@
   font-size: 1.75rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
 }
 
 .carousel-item img {
