@@ -14,7 +14,7 @@
 /* Filosofi Quote Box */
 .quote-purple {
   background-color: var(--tk-purple);
-  color: white; /* Pastikan teks di dalam quote berwarna putih */
+  color: white;
 }
 
 /* Visi, Misi, Tujuan Cards */
@@ -71,7 +71,7 @@
   color: var(--primary-text);
 }
 
-/* Memberi warna pada ikon judul */
+/* Warna pada ikon judul */
 .vmt-title-vision i {
   background-color: var(--tk-blue);
 }
@@ -82,7 +82,7 @@
   background-color: var(--tk-orange);
 }
 
-/* Gaya List Kreatif yang Disederhanakan */
+/* List  */
 .vmt-list {
   list-style: none;
   padding-left: 0;
@@ -110,7 +110,7 @@
   color: var(--secondary-text);
 }
 
-/* Memberi warna pada ikon list */
+/* Warna pada ikon list */
 .vmt-list-vision .vmt-list-icon {
   color: var(--tk-blue);
 }
