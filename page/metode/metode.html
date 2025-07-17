@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TK KUTILANG | Metode</title>
+    <title>TK KUTILANG | Metode Pembelajaran Sentra</title>
     <meta
       name="description"
-      content="Mengenal lebih dekat metode pembelajaran di TK Kutilang, termasuk Sentra Bahan Alam, Seni, Balok, Persiapan, Imtaq, Peran, Kelas Memasak, dan Kurikulum."
+      content="Mengenal lebih dekat metode pembelajaran sentra di TK Kutilang yang berpusat pada anak, mulai dari Sentra Seni, Balok, hingga Kelas Memasak."
     />
 
     <link
@@ -15,20 +15,21 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="../../src/css/index.css" />
     <link rel="stylesheet" href="../../src/css/metode.css" />
 
-    <!-- Favicon -->
     <link
       rel="icon"
       href="../../Assets/img/Favicon.jpg"
@@ -38,685 +39,651 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="../../index.html">
-          <img
-            src="../../Assets/img/Logo.png"
-            alt="TK Kutilang Logo"
-            class="img-fluid logo"
-          />
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 rounded-pill" href="../../index.html"
-                >Beranda</a
-              >
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tentang Kami
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../tentangkami/tentang-kami.html#latar-belakang"
-                    >Latar Belakang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../tentangkami/tentang-kami.html#filosofi"
-                    >Filosofi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Visi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Misi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Tujuan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#poma"
-                    >POMA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#fieldtrip"
-                    >Fieldtrip</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#berenang"
-                    >Berenang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#kelas-musik"
-                    >Kelas Musik</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#sehari-bersama-ayah"
-                    >Sehari Bersama Ayah</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#minum-teh-bersama-ibu"
-                    >Minum Teh Bersama Ibu</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#storytelling"
-                    >Storytelling</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="../program/program.html#pendidikan-makanan"
-                    >Pendidikan Makanan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Metode
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#bahan-alam"
-                    >Sentra Bahan Alam</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#seni"
-                    >Sentra Seni</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#balok"
-                    >Sentra Balok</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#persiapan"
-                    >Sentra Persiapan</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#imtaq"
-                    >Sentra Imtaq</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#peran"
-                    >Sentra Peran</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#kelas-memasak"
-                    >Kelas Memasak</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="metode.html#kurikulum"
-                    >Kurikulum</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link px-3 py-2 rounded-pill"
-                href="../../cara-mendaftar.html"
-                >Cara Mendaftar</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link px-3 py-2 rounded-pill"
-                href="../../kontak.html"
-                >Kontak</a
-              >
-            </li>
-          </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-2 px-0">
+        <div class="container">
+          <a class="navbar-brand" href="../../index.html">
+            <img
+              src="../../Assets/img/Logo.png"
+              alt="TK Kutilang Logo"
+              class="img-fluid logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto gap-1">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Tentang Kami</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../tentangkami/tentang-kami.html#latar-belakang"
+                      >Latar Belakang</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../tentangkami/tentang-kami.html#filosofi"
+                      >Filosofi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="../tentangkami/tentang-kami.html#visi-misi-tujuan"
+                      >Visi, Misi & Tujuan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Program</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../program/program.html"
+                      >Lihat Semua Program</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Metode Sentra</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#bahan-alam"
+                      >Sentra Bahan Alam</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#seni">Sentra Seni</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#balok">Sentra Balok</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#persiapan"
+                      >Sentra Persiapan</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#imtaq">Sentra Imtaq</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#peran">Sentra Peran</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#memasak">Kelas Memasak</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../cara-mendaftar.html"
+                  >Cara Mendaftar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../../kontak.html">Hubungi Kami</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
+      </nav>
+    </header>
 
-    <!-- SENTRA BAHAN ALAM SECTION -->
-    <section class="sentra-section py-5" id="bahan-alam">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Sentra Bahan Alam</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card bahan-alam-card p-4 mb-4">
-              <p class="fs-5 mb-4">
-                Diambil dari kata <span><i>"messy play"</i></span> atau main
-                kotor/berantakan. Oleh karena itu, di dalam sentra ini, anak
-                dibebaskan untuk melakukan eksplorasi bahan-bahan yang ada
-                melalui semua panca indranya.
-              </p>
-              <p class="fs-5 mb-0">
-                Sentra ini menyediakan bahan sifat cair maupun main terstruktur.
-                Anak bisa bermain air, pasir, lumpur, cat, play dough, kayu,
-                buah kapas, hingga biji-bijian seperti jagung, kacang hijau,
-                kacang merah, kedelai, beras, dan sebagainya.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-4">
+    <main>
+      <section id="bahan-alam" class="sentra-section py-5">
+        <div class="container mt-5">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+              <div
+                id="carouselBahanAlam"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
                     <img
                       src="../../Assets/img/metode/bahanalam/alam1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto bahan dan peralatan yang digunakan di sentra bahan alam (1)"
+                      class="d-block w-100"
+                      alt="Sentra Bahan Alam 1"
                     />
                   </div>
-                  <div class="col-md-4">
+                  <div class="carousel-item">
                     <img
                       src="../../Assets/img/metode/bahanalam/alam2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra bahan alam"
+                      class="d-block w-100"
+                      alt="Sentra Bahan Alam 2"
                     />
                   </div>
-                  <div class="col-md-4">
+                  <div class="carousel-item">
                     <img
                       src="../../Assets/img/metode/bahanalam/alam3.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto bahan dan peralatan yang digunakan di sentra bahan alam (2)"
+                      class="d-block w-100"
+                      alt="Sentra Bahan Alam 3"
                     />
                   </div>
                 </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselBahanAlam"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselBahanAlam"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA BAHAN ALAM SECTION -->
-
-    <!-- SENTRA SENI SECTION -->
-    <section class="sentra-section py-5" id="seni">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Sentra Seni</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card seni-card p-4 mb-4">
-              <p class="fs-5 mb-0">
-                Anak-anak memiliki jiwa yang bebas, belum terbelenggu oleh
-                beragam masalah seperti orang dewasa. Jiwa bebas itulah yang
-                menjadi modal berharga munculnya kreativitas seni, sehingga anak
-                sering disebut sebagai kreator alamiah.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-4">
-                    <img
-                      src="../../Assets/img/metode/seni/seni1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto melukis (1)"
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <img
-                      src="../../Assets/img/metode/seni/seni2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto melukis (2)"
-                    />
-                  </div>
-                  <div class="col-md-4">
-                    <img
-                      src="../../Assets/img/metode/seni/seni3.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra seni"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA SENI SECTION -->
-
-    <!-- SENTRA BALOK SECTION -->
-    <section class="sentra-section py-5" id="balok">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Sentra Balok</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card balok-card p-4 mb-4">
-              <p class="fs-5 mb-0">
-                Berfokus pada pembangunan struktur berpikir dan pengetahuan anak
-                memakai balok unit dan material lainnya yang mempunyai bentuk
-                yang telah ditetapkan agar anak bisa membangun bangunan tiga
-                dimensi.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/balok/balok2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Hasil balok (1)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/balok/balok3.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Hasil balok (2)"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA BALOK SECTION -->
-
-    <!-- SENTRA PERSIAPAN SECTION -->
-    <section class="sentra-section py-5" id="persiapan">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Sentra Persiapan</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card persiapan-card p-4 mb-4">
-              <p class="fs-5 mb-0">
-                Sentra Persiapan adalah tempat guru mengorganisasikan tempat
-                secara khusus, yang fokus di dalamnya diisi dengan kegiatan
-                matematika, membaca, dan menulis.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/persiapan/persiapan3.jpg"
-                      class="img-fluid sentra-gallery-img w-100 mb-3"
-                      alt="Foto suasana sentra persiapan (1)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/persiapan/persiapan4.jpg"
-                      class="img-fluid sentra-gallery-img w-100 mb-3"
-                      alt="Foto suasana sentra persiapan (2)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/persiapan/persiapan1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto aktivitas sentra persiapan (1)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/persiapan/persiapan2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto aktivitas sentra persiapan (2)"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA PERSIAPAN SECTION -->
-
-    <!-- SENTRA IMTAQ SECTION -->
-    <section class="sentra-section py-5" id="imtaq">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">
-          Sentra Imtaq (Iman & Taqwa)
-        </h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card imtaq-card p-4 mb-4">
-              <p class="fs-5 mb-0">
-                Aturan-aturan agama disampaikan dalam bahasa yang bisa dipahami
-                anak serta dikemas dengan narasi kasih sayang, sehingga
-                nilai-nilai moral yang berlaku menjadi bagian hidup anak
-                sehari-hari.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/imtaq/imtaq1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra imtaq/iman & taqwa (1)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/imtaq/imtaq2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra imtaq/iman & taqwa (2)"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA IMTAQ SECTION -->
-
-    <!-- SENTRA PERAN SECTION -->
-    <section class="sentra-section py-5" id="peran">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Sentra Peran</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card peran-card p-4 mb-4">
-              <p class="fs-5 mb-4">
-                Peran besar, anak-anak belajar bagaimana menciptakan interaksi
-                sosial yang bermanfaat. Disebut juga sebagai main simbolik, role
-                play, pura-pura, make-believe, fantasi, imajinasi, atau main
-                drama. Peran besar, menggunakan alat-alat berukuran
-                sesungguhnya.
-              </p>
-              <p class="fs-5 mb-0">
-                Peran kecil, bermain secara simbolik dengan menggunakan mainan
-                dan miniatur, dengan bermain peran membuat anak mengembangkan
-                kemampuan pengendalian diri terhadap keinginannya.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/peran/peran1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra peran (1)"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/peran/peran2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana sentra peran (2)"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END SENTRA PERAN SECTION -->
-
-    <!-- KELAS MEMASAK SECTION -->
-    <section class="sentra-section py-5" id="kelas-memasak">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Kelas Memasak</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card memasak-card p-4 mb-4">
-              <p class="fs-5 mb-0">
-                Program kelas memasak dalam pendidikan anak usia dini (PAUD)
-                menawarkan kesempatan unik bagi anak-anak untuk belajar tentang
-                makanan, gizi, dan keterampilan hidup dasar melalui kegiatan
-                praktis dan menyenangkan. Dalam kelas ini, anak-anak diajari
-                cara menyiapkan makanan sederhana, memahami resep, dan mengenal
-                berbagai jenis bahan makanan. Selain itu, mereka juga belajar
-                tentang pentingnya kebersihan dan keamanan pangan.
-              </p>
-              <div class="text-center my-5">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/memasak/memasak1.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto mendampingi murid dalam aktivitas kelas memasak"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <img
-                      src="../../Assets/img/metode/memasak/memasak2.jpg"
-                      class="img-fluid sentra-gallery-img w-100"
-                      alt="Foto suasana kelas memasak"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END KELAS MEMASAK SECTION -->
-
-    <!-- KURIKULUM SECTION -->
-    <section class="sentra-section py-5" id="kurikulum">
-      <div class="container">
-        <h2 class="sentra-title text-center mt-5 mb-4">Kurikulum</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="sentra-card kurikulum-card p-4">
-              <p class="fs-5 mb-0">
-                Metode Sentra atau Beyond Centres and Circle Time (BCCT) adalah
-                model pembelajaran yang menjadikan bermain di sentra dan saat
-                lingkaran sebagai wahana belajar anak. Sebuah model kurikulum
-                pendidikan anak usia dini yang dirancang oleh Pamela C. Phelps,
-                Ph.D., di Florida, Amerika Serikat. Melalui Metode Sentra, guru
-                memberikan rangkaian aktifitas untuk memfasilitasi kemampuan
-                anak sesuai tahapan perkembangannya. Guru menempatkan diri
-                sebagai penyokong aktifitas sehingga metode ini bersifat
-                indirect teaching dan student centred.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END KURIKULUM SECTION -->
-
-    <!-- CONTACT SECTION -->
-    <section class="contact py-5 bg-primary-blue text-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <div class="contact-card p-4 rounded-3">
-              <div class="row">
-                <div class="col-md-6">
-                  <h3 class="mb-4">
-                    <span class="contact-highlight">TK Kutilang</span>
-                  </h3>
-                  <div class="mb-3">
-                    <i class="bi bi-geo-alt-fill me-2"></i>
-                    <strong>Alamat:</strong><br />
-                    Jalan Sanwani No 1 Rt.002 Rw.008 Jatimurni Pondok Melati,
-                    Kota Bekasi, 17431
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-telephone-fill me-2"></i>
-                    <strong>Telepon:</strong> (021) 1234567
-                  </div>
-                  <div class="mb-4">
-                    <i class="bi bi-envelope-fill me-2"></i>
-                    <strong>Email:</strong>
-                    <a
-                      href="mailto:kutilang@gmail.com"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      kutilang@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <h5 class="mb-3">Ikuti Kami</h5>
-                  <div class="mb-4 d-flex gap-3">
-                    <a
-                      href="#"
-                      title="Instagram"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-instagram"></i>
-                    </a>
-                    <a
-                      href="https://www.youtube.com/@paud-tkkutilangrumahperuba5183"
-                      title="YouTube"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-youtube"></i>
-                    </a>
-                    <a
-                      href="#"
-                      title="Facebook"
-                      class="d-flex align-items-center justify-content-center rounded-circle text-white text-decoration-none social-icon"
-                    >
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                  </div>
-                  <div class="mb-3">
-                    <i class="bi bi-clock-fill me-2"></i>
-                    <strong>Jam Operasional:</strong><br />
-                    Senin - Jumat: 07:00 - 15:00<br />
-                  </div>
-                  <p class="mb-0">
-                    <a
-                      href="https://rumahperubahan.com/"
-                      class="text-white text-decoration-none contact-link"
-                    >
-                      <i class="bi bi-house-fill me-2"></i>Rumah Perubahan
-                    </a>
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Sentra Bahan Alam</h2>
+                  <p class="fs-5 text-muted">
+                    Di sini, anak dibebaskan untuk melakukan eksplorasi
+                    bahan-bahan cair maupun terstruktur melalui semua panca
+                    indranya, dari bermain air, pasir, hingga biji-bijian.
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- END CONTACT SECTION -->
+      </section>
 
-    <!-- FOOTER -->
-    <footer class="footer-section py-4">
-      <div class="container">
-        <div class="row align-items-center">
-          <!-- Logo -->
-          <div class="col-md-6 text-center text-md-start">
-            <a href="../../index.html#heroCarousel">
-              <img
-                src="../../Assets/img/Logo.png"
-                alt="TK Kutilang Logo"
-                class="footer-logo img-fluid"
-              />
-            </a>
-          </div>
-          <!-- Copyright -->
-          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-            <p class="mb-0 fw-semibold footer-text">© 2025 TK Kutilang.</p>
+      <section id="seni" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-2" data-aos="fade-left">
+              <div
+                id="carouselSeni"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/seni/seni1.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Seni 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/seni/seni2.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Seni 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/seni/seni3.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Seni 3"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselSeni"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselSeni"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Sentra Seni</h2>
+                  <p class="fs-5 text-muted">
+                    Anak adalah kreator alamiah. Di sentra ini, kami
+                    memfasilitasi jiwa bebas mereka untuk memunculkan
+                    kreativitas seni yang tak terbatas melalui berbagai media.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section id="balok" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+              <div
+                id="carouselBalok"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/balok/balok2.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Balok 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/balok/balok3.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Balok 2"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselBalok"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselBalok"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Sentra Balok</h2>
+                  <p class="fs-5 text-muted">
+                    Berfokus pada pembangunan struktur berpikir dan pengetahuan
+                    anak. Mereka belajar membangun bentuk tiga dimensi
+                    menggunakan balok dan material lainnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="persiapan" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-2" data-aos="fade-left">
+              <div
+                id="carouselPersiapan"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/persiapan/persiapan1.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Persiapan 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/persiapan/persiapan2.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Persiapan 2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/persiapan/persiapan3.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Persiapan 3"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselPersiapan"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselPersiapan"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Sentra Persiapan</h2>
+                  <p class="fs-5 text-muted">
+                    Tempat khusus yang fokus pada kegiatan matematika, membaca,
+                    dan menulis sebagai pondasi kesiapan anak menuju jenjang
+                    pendidikan selanjutnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="imtaq" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+              <div
+                id="carouselImtaq"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/imtaq/imtaq1.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Imtaq 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/imtaq/imtaq2.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Imtaq 2"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselImtaq"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselImtaq"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">
+                    Sentra Imtaq (Iman & Taqwa)
+                  </h2>
+                  <p class="fs-5 text-muted">
+                    Aturan agama disampaikan dalam bahasa yang mudah dipahami
+                    dan dikemas dengan narasi kasih sayang, sehingga nilai-nilai
+                    moral menjadi bagian hidup anak sehari-hari.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="peran" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-2" data-aos="fade-left">
+              <div
+                id="carouselPeran"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/peran/peran1.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Peran 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/peran/peran2.jpg"
+                      class="d-block w-100"
+                      alt="Sentra Peran 2"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselPeran"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselPeran"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-1" data-aos="fade-right">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Sentra Peran</h2>
+                  <p class="fs-5 text-muted">
+                    Disebut juga main simbolik atau drama. Anak-anak belajar
+                    menciptakan interaksi sosial yang bermanfaat dan
+                    mengembangkan pengendalian diri melalui permainan peran.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="memasak" class="sentra-section py-5">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+              <div
+                id="carouselMemasak"
+                class="carousel slide shadow-lg rounded-4"
+                data-bs-ride="carousel"
+              >
+                <div class="carousel-inner rounded-4">
+                  <div class="carousel-item active">
+                    <img
+                      src="../../Assets/img/metode/memasak/memasak1.jpg"
+                      class="d-block w-100"
+                      alt="Kelas Memasak 1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../../Assets/img/metode/memasak/memasak2.jpg"
+                      class="d-block w-100"
+                      alt="Kelas Memasak 2"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselMemasak"
+                  data-bs-slide="prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselMemasak"
+                  data-bs-slide="next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+              <div class="card sentra-card-custom shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="card-title-sentra mb-3">Kelas Memasak</h2>
+                  <p class="fs-5 text-muted">
+                    Menawarkan kesempatan unik bagi anak untuk belajar tentang
+                    makanan, gizi, dan keterampilan hidup dasar melalui kegiatan
+                    praktis dan menyenangkan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section pt-5 pb-4">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="#">
+              <img
+                src="../../Assets/img/Logo.png"
+                alt="Logo TK Kutilang"
+                class="footer-logo mb-3"
+              />
+            </a>
+            <p class="footer-text">
+              Membangun generasi cerdas, kreatif, dan berakhlak mulia melalui
+              pendidikan yang berpusat pada anak.
+            </p>
+            <div class="footer-foundation mt-3 mb-3">
+              <p
+                class="mb-1"
+                style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.5)"
+              >
+                Bagian dari:
+              </p>
+              <a
+                href="https://rumahperubahan.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="foundation-link"
+              >
+                Rumah Perubahan
+              </a>
+            </div>
+            <div class="d-flex gap-2">
+              <a
+                href="https://www.instagram.com/tkkutilang_rumahperubahan/"
+                class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/your-channel-id"
+                class="social-icon"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Navigasi</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Beranda</a></li>
+              <li>
+                <a href="../tentangkami/tentang-kami.html">Tentang Kami</a>
+              </li>
+              <li><a href="../program/program.html">Program</a></li>
+              <li><a href="../metode/metode.html">Metode</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Pendaftaran</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="../../cara-mendaftar.html">Cara Mendaftar</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="footer-title">Hubungi Kami</h5>
+            <ul class="list-unstyled footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Jalan Sanwani No 1,
+                Jatimurni, Kota Bekasi
+              </li>
+              <li><i class="bi bi-telephone-fill"></i> (021) 84300213</li>
+              <li>
+                <i class="bi bi-envelope-fill"></i> info@tkkutilang.sch.id
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <div class="text-center footer-copyright">© 2025 TK Kutilang ❤</div>
       </div>
     </footer>
-    <!-- END FOOTER -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false, // Animasi hanya berjalan sekali
+      });
+    </script>
   </body>
 </html>
