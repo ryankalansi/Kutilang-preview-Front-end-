@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TK KUTILANG | Kontak</title>
+    <title>TK KUTILANG | Hubungi Kami</title>
     <meta
       name="description"
-      content="Hubungi TK Kutilang untuk informasi lebih lanjut mengenai pendaftaran, program, dan metode pembelajaran terbaik di Bekasi."
+      content="Hubungi TK Kutilang untuk informasi pendaftaran, pertanyaan, atau kunjungan. Temukan alamat, nomor telepon, dan peta lokasi kami di sini."
     />
 
     <link
@@ -15,20 +15,21 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="src/css/index.css" />
     <link rel="stylesheet" href="src/css/kontak.css" />
 
-    <!-- FAVICON -->
     <link
       rel="icon"
       href="Assets/img/Favicon.jpg"
@@ -38,326 +39,175 @@
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="Assets/img/Logo.png"
-            alt="TK Kutilang Logo"
-            class="img-fluid logo"
-          />
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ms-auto gap-2">
-            <li class="nav-item">
-              <a class="nav-link px-3 py-2 rounded-pill" href="index.html"
-                >Beranda</a
-              >
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Tentang Kami
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/tentangkami/tentang-kami.html#latar-belakang"
-                    >Latar Belakang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/tentangkami/tentang-kami.html#filosofi"
-                    >Filosofi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Visi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Misi</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/tentangkami/tentang-kami.html#visi-misi-tujuan"
-                    >Tujuan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#poma"
-                    >POMA</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#fieldtrip"
-                    >Fieldtrip</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#berenang"
-                    >Berenang</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#kelas-musik"
-                    >Kelas Musik</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#sehari-bersama-ayah"
-                    >Sehari Bersama Ayah</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#minum-teh-bersama-ibu"
-                    >Minum Teh Bersama Ibu</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#storytelling"
-                    >Storytelling</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/program/program.html#pendidikan-makanan"
-                    >Pendidikan Makanan</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle px-3 py-2 rounded-pill"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Metode
-              </a>
-              <ul class="dropdown-menu rounded-3 p-2">
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#bahan-alam"
-                    >Sentra Bahan Alam</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#seni"
-                    >Sentra Seni</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#balok"
-                    >Sentra Balok</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#persiapan"
-                    >Sentra Persiapan</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#imtaq"
-                    >Sentra Imtaq</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#peran"
-                    >Sentra Peran</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#kelas-memasak"
-                    >Kelas Memasak</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-2 px-3 py-2"
-                    href="page/metode/metode.html#kurikulum"
-                    >Kurikulum</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link px-3 py-2 rounded-pill"
-                href="cara-mendaftar.html"
-                >Cara Mendaftar</a
-              >
-            </li>
-
-            <li class="nav-item">
-              <a
-                class="nav-link active px-3 py-2 rounded-pill"
-                href="kontak.html"
-                >Kontak</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
-
-    <section class="contact-details-section py-5">
-      <div class="container pt-5">
-        <div class="row justify-content-center pt-5">
-          <div class="col-lg-10">
-            <div class="card contact-details-card shadow-lg border-0">
-              <div class="card-body p-4 p-md-5">
-                <div class="row">
-                  <!-- Kontak -->
-                  <div class="col-md-6 mb-4 mb-md-0">
-                    <h3 class="contact-details-title mb-4">Informasi Kontak</h3>
-                    <p class="contact-details-info mb-3">
-                      <i
-                        class="bi bi-geo-alt-fill me-2 text-primary-orange"
-                      ></i>
-                      <strong>Alamat:</strong><br />
-                      Jalan Sanwani No 1 Rt.002 Rw.008 Jatimurni Pondok Melati,
-                      Kota Bekasi, 17431
-                    </p>
-                    <p class="contact-details-info mb-3">
-                      <i
-                        class="bi bi-telephone-fill me-2 text-primary-purple"
-                      ></i>
-                      <strong>Telepon:</strong> (021) 1234567
-                    </p>
-                    <p class="contact-details-info mb-3">
-                      <i class="bi bi-envelope-fill me-2 text-primary-blue"></i>
-                      <strong>Email:</strong>
-                      <a
-                        href="mailto:kutilang@gmail.com"
-                        class="text-decoration-none custom-link-dark"
-                      >
-                        kutilang@gmail.com
-                      </a>
-                    </p>
-                    <p class="contact-details-info mb-4">
-                      <i class="bi bi-clock-fill me-2 text-success-green"></i>
-                      <strong>Jam Operasional:</strong><br />
-                      Senin - Jumat: 07:00 - 15:00
-                    </p>
-                    <p class="contact-details-info mb-4">
-                      <a
-                        href="https://rumahperubahan.com/"
-                        class="text-decoration-none custom-link-dark"
-                      >
-                        <i class="bi bi-house-fill me-2 text-primary-orange"></i
-                        >Rumah Perubahan
-                      </a>
-                    </p>
-                    <h5 class="mt-4 mb-3">Ikuti Kami</h5>
-                    <div class="d-flex gap-2">
-                      <a href="#" class="social-icon" title="Instagram">
-                        <i class="bi bi-instagram"></i>
-                      </a>
-                      <a
-                        href="https://www.youtube.com/@paud-tkkutilangrumahperuba5183"
-                        class="social-icon"
-                        title="YouTube"
-                      >
-                        <i class="bi bi-youtube"></i>
-                      </a>
-                      <a href="#" class="social-icon" title="Facebook">
-                        <i class="bi bi-facebook"></i>
-                      </a>
-                    </div>
-                  </div>
-
-                  <!-- Maps -->
-                  <div class="col-md-6">
-                    <h3 class="contact-details-title mb-4">Lokasi Kami</h3>
-                    <div
-                      class="contact-details-map rounded-3 overflow-hidden shadow-sm"
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-2 px-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="Assets/img/Logo.png"
+              alt="TK Kutilang Logo"
+              class="img-fluid logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto gap-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Tentang Kami</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentangkami/tentang-kami.html#latar-belakang"
+                      >Latar Belakang</a
                     >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentangkami/tentang-kami.html#filosofi"
+                      >Filosofi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentangkami/tentang-kami.html#visi-misi-tujuan"
+                      >Visi, Misi & Tujuan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Program</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="page/program/program.html"
+                      >Lihat Semua Program</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Metode Sentra</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="page/metode/metode.html"
+                      >Lihat Semua Sentra</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cara-mendaftar.html"
+                  >Cara Mendaftar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="kontak.html">Hubungi Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-header-section text-center text-white">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Hubungi Kami</h1>
+          <p class="lead col-lg-8 mx-auto">
+            Kami siap membantu menjawab pertanyaan Anda. Jangan ragu untuk
+            menghubungi kami melalui informasi di bawah ini.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-info-section py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="contact-card-wrapper p-4 p-lg-5">
+                <div class="row g-5">
+                  <div class="col-lg-6" data-aos="fade-right">
+                    <h3 class="contact-title mb-4">Informasi Kontak</h3>
+                    <ul class="list-unstyled contact-list">
+                      <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-geo-alt-fill contact-icon"></i>
+                        <div>
+                          <strong>Alamat</strong>
+                          <p>
+                            Jalan Sanwani No 1 Rt.002 Rw.008 Jatimurni, Pondok
+                            Melati, Kota Bekasi, 17431
+                          </p>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-telephone-fill contact-icon"></i>
+                        <div>
+                          <strong>Telepon</strong>
+                          <p>(021) 1234567</p>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-envelope-fill contact-icon"></i>
+                        <div>
+                          <strong>Email</strong>
+                          <p>
+                            <a
+                              href="mailto:kutilang@gmail.com"
+                              class="text-decoration-none"
+                              >kutilang@gmail.com</a
+                            >
+                          </p>
+                        </div>
+                      </li>
+                      <li class="d-flex align-items-start">
+                        <i class="bi bi-clock-fill contact-icon"></i>
+                        <div>
+                          <strong>Jam Operasional</strong>
+                          <p class="mb-0">Senin - Jumat: 07:00 - 15:00</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6" data-aos="fade-left">
+                    <h3 class="contact-title mb-4">Lokasi Kami</h3>
+                    <div class="map-wrapper shadow-sm">
                       <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.497137825994!2d106.92434407475157!3d-6.329570993660004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6992da4d5dea93%3A0x2e4413fb45d17a8b!2sPAUD%20Kutilang!5e0!3m2!1sen!2sid!4v1716102891891!5m2!1sen!2sid"
                         width="100%"
-                        height="400"
+                        height="350"
                         style="border: 0"
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                      >
-                      </iframe>
+                      ></iframe>
                     </div>
                   </div>
                 </div>
@@ -365,71 +215,119 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section
-      class="cta-section py-5 text-white text-center position-relative overflow-hidden"
-    >
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <h2 class="display-4 fw-bold mb-4">
-              Informasi Pendaftaran <br />TK Kutilang
-            </h2>
-            <p class="fs-4 mb-5">
-              Untuk informasi lebih lanjut mengenai kegiatan belajar dan proses
-              pendaftaran, silakan lihat halaman terkait atau hubungi kami
-              secara langsung.
-            </p>
-            <div
-              class="d-flex flex-column flex-sm-row gap-3 justify-content-center"
-            >
+      <section class="cta-section text-white text-center py-5">
+        <div class="container" data-aos="zoom-in">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="display-5 fw-bold mb-4">Ada Pertanyaan Lain?</h2>
+              <p class="fs-5 mb-5">
+                Lihat halaman pendaftaran kami untuk detail lebih lanjut atau
+                langsung daftarkan buah hati Anda.
+              </p>
               <a
                 href="cara-mendaftar.html"
-                class="cta-button btn btn-light rounded-pill px-4 py-3 fs-5 fw-semibold shadow text-decoration-none flex-fill u-hover-lift"
+                class="btn btn-light-custom btn-lg rounded-pill"
               >
-                <i class="bi bi-pencil-square me-2"></i>Lihat Info Pendaftaran
-              </a>
-              <a
-                href="kontak.html"
-                class="cta-button btn btn-light rounded-pill px-4 py-3 fs-5 fw-semibold shadow text-decoration-none flex-fill u-hover-lift"
-              >
-                <i class="bi bi-telephone me-2"></i>Hubungi Kami
+                Lihat Info Pendaftaran <i class="bi bi-arrow-right-short"></i>
               </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer-section py-4">
+    <footer class="footer-section pt-5 pb-4">
       <div class="container">
-        <div class="row align-items-center">
-          <!-- Logo -->
-          <div class="col-md-6 text-center text-md-start">
-            <a href="index.html#heroCarousel">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a href="#">
               <img
                 src="Assets/img/Logo.png"
-                alt="TK Kutilang Logo"
-                class="footer-logo img-fluid"
+                alt="Logo TK Kutilang"
+                class="footer-logo mb-3"
               />
             </a>
+            <p class="footer-text">
+              Membangun generasi cerdas, kreatif, dan berakhlak mulia melalui
+              pendidikan yang berpusat pada anak.
+            </p>
+            <div class="footer-foundation mt-3 mb-3">
+              <p
+                class="mb-1"
+                style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.5)"
+              >
+                Bagian dari:
+              </p>
+              <a
+                href="https://rumahperubahan.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="foundation-link"
+              >
+                Rumah Perubahan
+              </a>
+            </div>
+            <div class="d-flex gap-2">
+              <a
+                href="https://www.instagram.com/tkkutilang_rumahperubahan/"
+                class="social-icon"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/your-channel-id"
+                class="social-icon"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
           </div>
-          <!-- Copyright -->
-          <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
-            <p class="mb-0 fw-semibold footer-text">© 2025 TK Kutilang.</p>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Navigasi</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Beranda</a></li>
+              <li>
+                <a href="page/tentangkami/tentang-kami.html">Tentang Kami</a>
+              </li>
+              <li><a href="page/program/program.html">Program</a></li>
+              <li><a href="page/metode/metode.html">Metode</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-6">
+            <h5 class="footer-title">Pendaftaran</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="cara-mendaftar.html">Cara Mendaftar</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="footer-title">Hubungi Kami</h5>
+            <ul class="list-unstyled footer-contact">
+              <li>
+                <i class="bi bi-geo-alt-fill"></i> Jalan Sanwani No 1,
+                Jatimurni, Kota Bekasi
+              </li>
+              <li><i class="bi bi-telephone-fill"></i> (021) 84300213</li>
+              <li>
+                <i class="bi bi-envelope-fill"></i> info@tkkutilang.sch.id
+              </li>
+            </ul>
           </div>
         </div>
+        <hr class="footer-divider" />
+        <div class="text-center footer-copyright">© 2025 TK Kutilang ❤</div>
       </div>
     </footer>
-    <!-- END FOOTER -->
-
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: false,
+      });
+    </script>
   </body>
 </html>

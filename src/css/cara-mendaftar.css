@@ -1,269 +1,113 @@
-:root {
-  --primary-orange: #ff6b35;
-  --primary-purple: #8b5a96;
-  --primary-blue: #13294b;
-  --soft-yellow: #fff3cd;
-  --light-pink: #fcf2ff;
-  --success-green: #28a745;
-  --gradient-1: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-  --gradient-2: linear-gradient(135deg, #8b5a96 0%, #b088c4 100%);
-  --gradient-3: linear-gradient(135deg, #13294b 0%, #2c5282 100%);
+/*
+ * =============================================
+ * CSS KHUSUS HALAMAN CARA MENDAFTAR
+ * =============================================
+ */
+
+/* Section Styling Umum */
+.registration-steps-section {
+  background-color: var(--background-light);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.registration-form-section {
+  background-color: #f8f9fa;
 }
 
-body {
-  font-family: "Comic Neue", cursive;
-  line-height: 1.6;
-  overflow-x: hidden;
+.section-title {
+  font-family: var(--font-heading);
+  color: var(--primary-text);
+  font-weight: 700;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Fredoka", sans-serif;
-  font-weight: 600;
+.section-subtitle {
+  color: var(--secondary-text);
 }
 
-/* NAVBAR */
-.logo {
-  max-height: 3.75rem;
-  width: auto;
-}
-
-/* Navbar Container */
-.navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(0.6rem);
+/* Kartu Langkah Pendaftaran */
+.step-card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  border-top: 4px solid var(--tk-blue);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Navigation Links */
-.nav-link {
-  font-weight: 500;
-  color: var(--primary-blue) !important;
-  transition: all 0.3s ease;
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
-.nav-link:hover,
-.nav-link.active {
-  background: var(--gradient-1);
-  color: white !important;
-  transform: translateY(-2px);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-  border: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Dropdown Items */
-.dropdown-item {
-  color: var(--primary-blue);
-  transition: all 0.3s ease;
-}
-
-.dropdown-item:hover {
-  background: var(--gradient-2);
-  color: white !important;
-  transform: translateX(5px);
-}
-/* END NAVBAR */
-
-/* Registration Guide Section */
-.registration-guide {
-  background: linear-gradient(
-    135deg,
-    var(--soft-yellow) 0%,
-    var(--light-pink) 100%
-  );
-}
-
-.registration-guide-title {
-  color: var(--primary-blue);
-  position: relative;
-}
-
-.registration-guide-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: var(--gradient-1);
-  border-radius: 2px;
-}
-
-.registration-steps {
-  counter-reset: step-counter;
-}
-
-.registration-steps li {
-  counter-increment: step-counter;
-  position: relative;
-  padding-left: 40px;
-  margin-bottom: 1.5rem;
-}
-
-.registration-steps li::before {
-  content: counter(step-counter);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  background: var(--gradient-1);
-  border-radius: 50%;
+.step-number {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: var(--accent-orange);
   color: white;
-  font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  margin: -3.75rem auto 1.5rem auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Registration Form Section */
-.registration-form-section {
-  background: white;
+.step-title {
+  color: var(--primary-text);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
 }
 
-.registration-form-title {
-  color: var(--primary-blue);
-  position: relative;
+.step-text {
+  color: var(--secondary-text);
+  font-size: 0.95rem;
+  flex-grow: 1; /* Memastikan teks mengisi ruang agar kartu sama tinggi */
 }
 
-.registration-form-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 4px;
-  background: var(--gradient-1);
-  border-radius: 2px;
+/* Bagian Formulir Pendaftaran */
+.form-wrapper {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
 }
 
-.registration-form-card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+.form-wrapper .form-label {
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
 }
 
-.registration-form-control {
-  border-radius: 10px;
-  border: 1px solid #ced4da;
+.form-wrapper .form-control,
+.form-wrapper .form-select {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #dee2e6;
   transition: all 0.3s ease;
+  font-family: var(--font-body); /* Memastikan font konsisten */
+  font-size: 1rem;
 }
 
-.registration-form-control:focus {
-  border-color: var(--primary-orange);
-  box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.25);
+.form-wrapper .form-control:focus,
+.form-wrapper .form-select:focus {
+  border-color: var(--tk-orange);
+  box-shadow: 0 0 0 0.25rem rgba(255, 124, 24, 0.2);
 }
 
-.registration-submit-btn {
-  background: var(--gradient-1);
+/* Tombol Submit */
+.btn-primary-custom {
+  font-weight: 700;
+  transition: all 0.3s ease;
+  background: var(--tk-orange); /* Pastikan tombol menggunakan warna utama */
   color: white;
   border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
 }
-
-.registration-submit-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255, 107, 53, 0.4);
-  color: white;
-}
-
-/* CONTACT SECTION */
-.bg-primary-blue {
-  background-color: var(--primary-blue) !important;
-}
-
-.contact-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.social-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  background: var(--primary-orange);
-  transform: translateY(-3px);
-}
-
-.contact-link:hover {
-  color: var(--primary-orange) !important;
-}
-
-.contact-link:hover i {
-  color: white !important;
-}
-
-.contact-highlight {
-  color: #ffb6c1;
-}
-/* END CONTACT SECTION */
-
-/* FOOTER */
-.footer-section {
-  background-color: var(--soft-yellow);
-}
-
-.footer-logo {
-  max-height: 60px;
-  width: auto;
-}
-
-.footer-text {
-  color: #4694c5;
-}
-/* END FOOTER */
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .registration-guide-title,
-  .registration-form-title {
-    font-size: 2rem;
-  }
-
-  .registration-steps li {
-    padding-left: 35px;
-  }
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary-orange);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-purple);
+.btn-primary-custom:hover {
+  background: #e66a00; /* Warna sedikit lebih gelap saat hover */
+  transform: translateY(-2px);
 }
