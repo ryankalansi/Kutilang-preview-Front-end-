@@ -11,9 +11,10 @@
   /* Variabel Pendukung */
   --font-heading: "Poppins", sans-serif;
   --font-body: "Nunito Sans", sans-serif;
-  --primary-text: #13294b; /* Biru sangat gelap untuk teks */
+  --primary-text: #13294b;
   --secondary-text: #4a5568;
   --background-light: #fdfefe;
+  --background-soft: #f0f6ff;
   --footer-bg: #1a2c47;
   --accent-orange: linear-gradient(
     135deg,
@@ -24,6 +25,10 @@
 }
 
 /* === PENGATURAN DASAR & FIX === */
+* {
+  box-sizing: border-box;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -198,7 +203,7 @@ h6 {
 
 /* === SENTRA & VIDEO SECTION === */
 .sentra-video-section {
-  background-color: #f0f6ff;
+  background-color: var(--background-soft);
   padding: 5rem 0;
 }
 .sentra-badge {

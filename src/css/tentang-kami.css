@@ -1,22 +1,43 @@
-.section-title {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--primary-text);
+/*
+ * =============================================
+ * CSS KHUSUS HALAMAN TENTANG KAMI (FINAL V2)
+ * =============================================
+ */
+
+/* KETERANGAN: 
+   Memberi MARGIN atas pada section pertama di dalam <main>.
+   Ini untuk memberi jarak dari navbar saat halaman pertama kali dimuat.
+*/
+main > section:first-of-type {
+  margin-top: 5rem; /* 80px, bisa disesuaikan */
 }
 
+/* KETERANGAN BARU:
+   Menambahkan 'ganjalan' saat scrolling ke anchor link (misal: #latar-belakang).
+   Ini memastikan judul section tidak tertutup oleh navbar setelah link di-klik.
+*/
+main > section {
+  scroll-margin-top: 5rem; /* Samakan nilainya dengan margin-top di atas */
+}
+
+#latar-belakang {
+  background-color: var(--background-soft);
+}
+
+.section-title,
 .section-title-sub {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--primary-text);
 }
 
-/* Quote Box - Minimal custom CSS */
+/* Quote Box */
 .quote-purple {
   background: linear-gradient(135deg, var(--tk-purple) 0%, #a86cc7 100%);
   color: white;
 }
 
-/* VMT Cards - Optimized with Bootstrap utilities */
+/* Kartu Visi, Misi, Tujuan (VMT) */
 .vmt-card {
   border: none;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.08);
@@ -39,7 +60,16 @@
   border-color: var(--tk-orange);
 }
 
-/* Icon backgrounds */
+/* Menggantikan inline style untuk ukuran ikon */
+.vmt-card .icon-vision,
+.vmt-card .icon-mission,
+.vmt-card .icon-goal {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0; /* Mencegah ikon mengecil */
+}
+
+/* Warna latar belakang ikon */
 .icon-vision {
   background-color: var(--tk-blue);
 }
@@ -50,7 +80,7 @@
   background-color: var(--tk-orange);
 }
 
-/* List icon colors */
+/* Warna ikon di dalam list */
 .text-vision {
   color: var(--tk-blue);
 }
