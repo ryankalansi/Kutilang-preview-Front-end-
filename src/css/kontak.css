@@ -4,22 +4,26 @@
  * =============================================
  */
 
+/* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
+main > section:first-of-type {
+  margin-top: 5rem;
+}
+
 /* Header Halaman */
 .page-header-section {
-  padding: 6rem 0;
-  background: var(--tk-orange); /* Warna oranye untuk membedakan */
-  margin-top: 4.625rem;
+  padding: 5rem 0;
+  background: var(--accent-orange);
 }
 
 /* Bagian Informasi Kontak */
 .contact-info-section {
-  background-color: #f8f9fa; /* Latar belakang abu-abu lembut */
+  background-color: var(--background-soft);
 }
 
 .contact-card-wrapper {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.5rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.5rem 1.5rem var(--black-08-opacity);
 }
 
 .contact-title {
@@ -28,45 +32,29 @@
   font-weight: 700;
 }
 
-.contact-list p,
-.contact-list a {
+.contact-list p {
   color: var(--secondary-text);
   margin-bottom: 0;
 }
 
-.contact-list a:hover {
+.contact-link {
+  color: var(--secondary-text);
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
   color: var(--tk-orange);
 }
 
 .contact-icon {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--tk-orange);
-  margin-right: 1rem;
+  margin-right: 1.25rem;
   margin-top: 0.25rem;
 }
 
 .map-wrapper {
   border-radius: 1rem;
   overflow: hidden; /* Memastikan iframe mengikuti sudut rounded */
-}
-
-/* Bagian CTA (Call to Action) */
-.cta-section {
-  background: var(--tk-blue); /* Menggunakan warna biru dari palet */
-}
-
-.btn-light-custom {
-  background-color: white;
-  color: var(--tk-blue);
-  font-weight: 700;
-  padding: 1rem 2.5rem;
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-.btn-light-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  background-color: transparent;
-  color: white;
-  border: 2px solid white;
+  border: 1px solid #dee2e6;
 }

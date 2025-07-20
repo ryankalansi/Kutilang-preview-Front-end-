@@ -4,35 +4,25 @@
  * =============================================
  */
 
-/* Header Halaman */
-.page-header-section {
-  padding: 6rem 0;
-  background: var(
-    --tk-purple
-  ); /* Warna berbeda untuk membedakan dari halaman program */
-  margin-top: 4.625rem;
+/* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
+main > section:first-of-type {
+  margin-top: 5rem;
 }
 
-/* Section Styling Umum untuk Pemisah Visual */
-.sentra-section {
-  transition: background-color 0.3s ease-in-out;
+/* Memastikan judul section tidak tertutup navbar saat anchor link di-klik */
+main > section {
+  scroll-margin-top: 5rem;
 }
 
-main > .sentra-section:nth-child(odd) {
+/* Memberi warna latar belakang selang-seling untuk memisahkan section */
+.sentra-section:nth-of-type(even) {
+  background-color: var(--background-soft);
+}
+
+.sentra-section:nth-of-type(odd) {
   background-color: var(--background-light);
 }
 
-main > .sentra-section:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-.card-title-sentra {
-  font-family: var(--font-heading);
-  color: var(--primary-text);
-  font-weight: 700;
-}
-
-/* Mengatur rasio gambar di carousel */
 .carousel-item img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -46,20 +36,26 @@ main > .sentra-section:nth-child(even) {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  padding: 1rem;
+  background-color: var(--white);
+  height: 100%;
+}
+
+.sentra-card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem var(--black-08-opacity);
 }
 
 .sentra-card-custom .card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  padding: 2.5rem;
 }
 
-.sentra-card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08) !important;
+.sentra-title {
+  font-family: var(--font-heading);
+  color: var(--primary-text);
+  font-weight: 700;
 }
 
 /* Warna border kiri yang berbeda untuk setiap sentra */
@@ -76,11 +72,18 @@ main > .sentra-section:nth-child(even) {
   border-left-color: var(--tk-yellow);
 }
 #imtaq .sentra-card-custom {
-  border-left-color: #6f42c1;
+  border-left-color: var(--tk-dark-blue);
 }
 #peran .sentra-card-custom {
   border-left-color: var(--tk-purple);
 }
 #memasak .sentra-card-custom {
   border-left-color: var(--tk-orange);
+}
+
+/* Penyesuaian padding kartu untuk layar kecil */
+@media (max-width: 991.98px) {
+  .sentra-card-custom .card-body {
+    padding: 2rem;
+  }
 }

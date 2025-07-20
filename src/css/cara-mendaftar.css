@@ -4,13 +4,18 @@
  * =============================================
  */
 
+/* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
+main > section:first-of-type {
+  margin-top: 5rem;
+}
+
 /* Section Styling Umum */
 .registration-steps-section {
   background-color: var(--background-light);
 }
 
 .registration-form-section {
-  background-color: #f8f9fa;
+  background-color: var(--background-soft);
 }
 
 .section-title {
@@ -25,12 +30,12 @@
 
 /* Kartu Langkah Pendaftaran */
 .step-card {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.5rem;
   padding: 2rem;
   text-align: center;
   border-top: 4px solid var(--tk-blue);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.5rem 1.5rem var(--black-08-opacity);
   transition: all 0.3s ease;
   width: 100%;
   display: flex;
@@ -39,14 +44,14 @@
 
 .step-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
 }
 
 .step-number {
   width: 3.5rem;
   height: 3.5rem;
   background: var(--accent-orange);
-  color: white;
+  color: var(--white);
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
@@ -55,11 +60,12 @@
   align-items: center;
   justify-content: center;
   margin: -3.75rem auto 1.5rem auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--black-15-opacity);
 }
 
 .step-title {
   color: var(--primary-text);
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
@@ -72,9 +78,9 @@
 
 /* Bagian Formulir Pendaftaran */
 .form-wrapper {
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 1.5rem;
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0.5rem 1.5rem var(--black-08-opacity);
 }
 
 .form-wrapper .form-label {
@@ -89,25 +95,28 @@
   border-radius: 0.75rem;
   border: 1px solid #dee2e6;
   transition: all 0.3s ease;
-  font-family: var(--font-body); /* Memastikan font konsisten */
-  font-size: 1rem;
 }
 
 .form-wrapper .form-control:focus,
 .form-wrapper .form-select:focus {
   border-color: var(--tk-orange);
-  box-shadow: 0 0 0 0.25rem rgba(255, 124, 24, 0.2);
+  box-shadow: 0 0 0 0.25rem rgba(255, 124, 24, 0.25);
+}
+
+.form-notice {
+  color: var(--secondary-text);
+  font-size: 0.875rem;
 }
 
 /* Tombol Submit */
 .btn-primary-custom {
   font-weight: 700;
   transition: all 0.3s ease;
-  background: var(--tk-orange); /* Pastikan tombol menggunakan warna utama */
-  color: white;
+  background: var(--tk-orange);
+  color: var(--white);
   border: none;
 }
 .btn-primary-custom:hover {
-  background: #e66a00; /* Warna sedikit lebih gelap saat hover */
+  background: #e66a00; /* Warna oranye sedikit lebih gelap saat hover */
   transform: translateY(-2px);
 }
