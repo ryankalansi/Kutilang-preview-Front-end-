@@ -1,26 +1,20 @@
 /*
  * =============================================
- * CSS KHUSUS HALAMAN TENTANG KAMI (FINAL V2)
+ * CSS KHUSUS HALAMAN TENTANG KAMI
  * =============================================
  */
 
-/* KETERANGAN: 
-   Memberi MARGIN atas pada section pertama di dalam <main>.
-   Ini untuk memberi jarak dari navbar saat halaman pertama kali dimuat.
-*/
+/* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
 main > section:first-of-type {
-  margin-top: 5rem; /* 80px, bisa disesuaikan */
+  margin-top: 5rem;
 }
 
-/* KETERANGAN BARU:
-   Menambahkan 'ganjalan' saat scrolling ke anchor link (misal: #latar-belakang).
-   Ini memastikan judul section tidak tertutup oleh navbar setelah link di-klik.
-*/
+/* Memastikan judul section tidak tertutup navbar saat anchor link di-klik */
 main > section {
-  scroll-margin-top: 5rem; /* Samakan nilainya dengan margin-top di atas */
+  scroll-margin-top: 5rem;
 }
 
-#latar-belakang {
+#filosofi {
   background-color: var(--background-soft);
 }
 
@@ -32,15 +26,19 @@ main > section {
 }
 
 /* Quote Box */
-.quote-purple {
-  background: linear-gradient(135deg, var(--tk-purple) 0%, #a86cc7 100%);
-  color: white;
+.quote-card {
+  background: var(--accent-purple);
+  color: var(--white);
+}
+
+.quote-footer {
+  color: var(--white-70-opacity);
 }
 
 /* Kartu Visi, Misi, Tujuan (VMT) */
 .vmt-card {
   border: none;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.3rem 1rem var(--black-08-opacity);
   transition: all 0.3s ease-in-out;
   border-top: 4px solid;
 }
@@ -60,10 +58,7 @@ main > section {
   border-color: var(--tk-orange);
 }
 
-/* Menggantikan inline style untuk ukuran ikon */
-.vmt-card .icon-vision,
-.vmt-card .icon-mission,
-.vmt-card .icon-goal {
+.vmt-icon {
   width: 50px;
   height: 50px;
   flex-shrink: 0; /* Mencegah ikon mengecil */
