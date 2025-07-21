@@ -110,7 +110,7 @@ h6 {
 
 /* === HERO SECTION === */
 .hero-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
   background: var(--tk-blue);
   color: var(--white);
   margin-top: 4.625rem;
@@ -265,7 +265,6 @@ h6 {
   background-color: var(--tk-orange);
 }
 
-/* === CTA SECTION === */
 .cta-section {
   padding: 5rem 0;
   background: var(--accent-orange);
@@ -274,6 +273,8 @@ h6 {
 .cta-subtitle {
   color: var(--white);
 }
+
+/* Tombol Utama (Aksi Primer) */
 .btn-light-custom {
   background-color: var(--white);
   color: var(--tk-orange);
@@ -288,6 +289,22 @@ h6 {
   background-color: transparent;
   color: var(--white);
   border: 2px solid var(--white);
+}
+
+/* Tombol Baru (Aksi Sekunder) */
+.btn-outline-light-custom {
+  background-color: transparent;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--white);
+}
+.btn-outline-light-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--black-20-opacity);
+  background-color: var(--white);
+  color: var(--tk-orange);
 }
 
 /* === FOOTER === */
