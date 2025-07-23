@@ -113,7 +113,7 @@ h6 {
   padding: 2rem 0;
   background: var(--tk-blue);
   color: var(--white);
-  margin-top: 4.625rem;
+  margin-top: 4rem;
 }
 .hero-title {
   color: var(--white);
@@ -123,7 +123,7 @@ h6 {
   color: var(--white-90-opacity);
 }
 .carousel-inner img {
-  aspect-ratio: 4/3;
+  aspect-ratio: 7/5;
   object-fit: cover;
 }
 .btn-primary-custom {
@@ -150,11 +150,6 @@ h6 {
   background-color: var(--white);
   color: var(--tk-blue);
   transform: translateY(-2px);
-}
-@media (max-width: 991.98px) {
-  .hero-section {
-    text-align: center;
-  }
 }
 
 /* === FEATURES SECTION (TATA NILAI) === */
