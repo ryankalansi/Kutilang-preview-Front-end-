@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TK Kutilang | Galeri</title>
+    <meta
+      name="description"
+      content="Galeri foto kegiatan dan momen berharga di TK Kutilang."
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link
+      rel="icon"
+      href="Assets/img/Favicon.jpg"
+      type="image/jpg"
+      sizes="32x32"
+    />
+    <style>
+      /* === PERBAIKAN CSS UNTUK INFINITY SCROLL === */
+      body {
+        background-color: var(--background-soft);
+        overflow-x: hidden;
+      }
+      .gallery-header {
+        background: var(--accent-orange);
+        color: var(--white);
+        margin-top: 4rem;
+        padding: 3rem 0;
+      }
+      .marquee-section {
+        padding: 3rem 0;
+      }
+      .marquee-wrapper {
+        overflow: hidden;
+        display: flex;
+        position: relative;
+        width: 100%;
+        user-select: none;
+      }
+      .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        /* Perubahan 1: Hapus justify-content & min-width */
+        animation: scroll 60s linear infinite;
+      }
+      .marquee-content.reverse {
+        animation-name: scroll-reverse;
+      }
+      .marquee-content img {
+        height: 250px;
+        width: auto;
+        margin: 0 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .marquee-content img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Perubahan 2: Logika keyframes diubah agar seamless */
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          /* Bergerak sejauh 50% dari total lebar elemen ini */
+          /* Karena isinya diduplikasi, 50% adalah lebar satu set gambar */
+          transform: translateX(-50%);
+        }
+      }
+
+      @keyframes scroll-reverse {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      .marquee-wrapper:hover .marquee-content {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-2 px-0">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="Assets/img/Logo.png"
+              alt="TK Kutilang Logo"
+              class="img-fluid logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto gap-1">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Beranda</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Tentang Kami</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentang-kami.html#latar-belakang"
+                      >Latar Belakang</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentang-kami.html#filosofi"
+                      >Filosofi</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/tentang-kami.html#visi-misi-tujuan"
+                      >Visi, Misi & Tujuan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Program</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="page/program.html#poma"
+                      >POMA</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/program.html#fieldtrip"
+                      >Fieldtrip</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/program.html#berenang"
+                      >Berenang</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/program.html#kelas-musik"
+                      >Kelas Musik</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/program.html#sehari-bersama-ayah"
+                      >Sehari Bersama Ayah</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/program.html#minum-teh-bersama-ibu"
+                      >Minum Teh Bersama Ibu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/program.html#storytelling"
+                      >Storytelling</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="page/program.html#pendidikan-makanan"
+                      >Pendidikan Makanan</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  >Metode Sentra</a
+                >
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#bahan-alam"
+                      >Sentra Bahan Alam</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#seni"
+                      >Sentra Seni</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#balok"
+                      >Sentra Balok</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#persiapan"
+                      >Sentra Persiapan</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#imtaq"
+                      >Sentra Imtaq</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#peran"
+                      >Sentra Peran</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="page/metode.html#memasak"
+                      >Kelas Memasak</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="galeri.html">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cara-mendaftar.html"
+                  >Cara Mendaftar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kontak.html">Hubungi Kami</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="gallery-header text-center">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Galeri Kegiatan</h1>
+          <p class="lead col-lg-8 mx-auto">
+            Momen-momen keceriaan dan pembelajaran yang tertangkap kamera di TK
+            Kutilang.
+          </p>
+        </div>
+      </section>
+
+      <section class="marquee-section">
+        <div class="marquee-wrapper">
+          <div class="marquee-content">
+            <img src="Assets/img/program/field%20trip/rp3.jpg" alt="Galeri 1" />
+            <img
+              src="Assets/img/program/seharibersamaayah/7.webp"
+              alt="Galeri 2"
+            />
+            <img src="Assets/img/banner/banner-1.webp" alt="Galeri 3" />
+            <img
+              src="Assets/img/program/seharibersamaayah/5.webp"
+              alt="Galeri 4"
+            />
+            <img
+              src="Assets/img/program/berenang/berenang2.jpg"
+              alt="Galeri 5"
+            />
+            <img src="Assets/img/beranda/21.webp" alt="Galeri 6" />
+            <img src="Assets/img/program/minumteh/teh1.jpg" alt="Galeri 7" />
+            <img src="Assets/img/metode/balok/balok1.jpg" alt="Galeri 8" />
+            <img
+              src="Assets/img/program/field%20trip/ragunan1.jpg"
+              alt="Galeri 9"
+            />
+            <img src="Assets/img/metode/seni/seni1.jpg" alt="Galeri 10" />
+            <img src="Assets/img/program/field%20trip/rp3.jpg" alt="Galeri 1" />
+            <img
+              src="Assets/img/program/seharibersamaayah/7.webp"
+              alt="Galeri 2"
+            />
+            <img src="Assets/img/banner/banner-1.webp" alt="Galeri 3" />
+            <img
+              src="Assets/img/program/seharibersamaayah/5.webp"
+              alt="Galeri 4"
+            />
+            <img
+              src="Assets/img/program/berenang/berenang2.jpg"
+              alt="Galeri 5"
+            />
+            <img
+              src="Assets/img/program/field%20trip/fieldtrip%202.jpg"
+              alt="Galeri 6"
+            />
+            <img src="Assets/img/program/minumteh/teh1.jpg" alt="Galeri 7" />
+            <img src="Assets/img/metode/balok/balok1.jpg" alt="Galeri 8" />
+            <img
+              src="Assets/img/program/field%20trip/ragunan1.jpg"
+              alt="Galeri 9"
+            />
+            <img src="Assets/img/metode/seni/seni1.jpg" alt="Galeri 10" />
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee-section pt-0">
+        <div class="marquee-wrapper">
+          <div class="marquee-content reverse">
+            <img src="Assets/img/banner/17.webp" alt="Galeri 11" />
+            <img
+              src="Assets/img/program/kelas%20musik/musik1.jpg"
+              alt="Galeri 12"
+            />
+            <img
+              src="Assets/img/program/seharibersamaayah/ayah1.jpg"
+              alt="Galeri 13"
+            />
+            <img src="Assets/img/metode/memasak/memasak1.jpg" alt="Galeri 14" />
+            <img src="Assets/img/banner/8.webp" alt="Galeri 15" />
+            <img src="Assets/img/banner/23.webp" alt="Galeri 16" />
+            <img
+              src="Assets/img/program/seharibersamaayah/4.webp"
+              alt="Galeri 17"
+            />
+            <img
+              src="Assets/img/metode/persiapan/persiapan2.jpg"
+              alt="Galeri 18"
+            />
+            <img
+              src="Assets/img/program/kelas%20musik/musik2.jpg"
+              alt="Galeri 19"
+            />
+            <img
+              src="Assets/img/program/seharibersamaayah/3.webp"
+              alt="Galeri 20"
+            />
+            <img src="Assets/img/banner/17.webp" alt="Galeri 11" />
+            <img
+              src="Assets/img/program/kelas%20musik/musik1.jpg"
+              alt="Galeri 12"
+            />
+            <img
+              src="Assets/img/program/seharibersamaayah/ayah1.jpg"
+              alt="Galeri 13"
+            />
+            <img src="Assets/img/metode/memasak/memasak1.jpg" alt="Galeri 14" />
+            <img src="Assets/img/banner/8.webp" alt="Galeri 15" />
+            <img src="Assets/img/banner/23.webp" alt="Galeri 16" />
+            <img
+              src="Assets/img/program/seharibersamaayah/4.webp"
+              alt="Galeri 17"
+            />
+            <img
+              src="Assets/img/metode/persiapan/persiapan2.jpg"
+              alt="Galeri 18"
+            />
+            <img
+              src="Assets/img/program/kelas%20musik/musik2.jpg"
+              alt="Galeri 19"
+            />
+            <img
+              src="Assets/img/program/seharibersamaayah/3.webp"
+              alt="Galeri 20"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section pt-5 pb-4">
+      <div class="container text-center">
+        <p class="footer-copyright">© 2025 TK Kutilang ♥</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
