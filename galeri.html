@@ -27,78 +27,13 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/galeri.css" />
     <link
       rel="icon"
       href="Assets/img/Favicon.jpg"
       type="image/jpg"
       sizes="32x32"
     />
-
-    <style>
-      /* === PERBAIKAN CSS UNTUK INFINITY SCROLL === */
-
-      .gallery-header {
-        background: var(--accent-orange);
-        color: var(--white);
-        margin-top: 4rem;
-        padding: 3rem 0;
-      }
-      .marquee-section {
-        padding: 3rem 0;
-      }
-      .marquee-wrapper {
-        overflow: hidden;
-        display: flex;
-        position: relative;
-        width: 100%;
-        user-select: none;
-      }
-      .marquee-content {
-        display: flex;
-        flex-shrink: 0;
-        /* Perubahan 1: Hapus justify-content & min-width */
-        animation: scroll 60s linear infinite;
-      }
-      .marquee-content.reverse {
-        animation-name: scroll-reverse;
-      }
-      .marquee-content img {
-        height: 250px;
-        width: auto;
-        margin: 0 1rem;
-        border-radius: 1rem;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-      .marquee-content img:hover {
-        transform: scale(1.05);
-      }
-
-      /* Perubahan 2: Logika keyframes diubah agar seamless */
-      @keyframes scroll {
-        from {
-          transform: translateX(0);
-        }
-        to {
-          /* Bergerak sejauh 50% dari total lebar elemen ini */
-          /* Karena isinya diduplikasi, 50% adalah lebar satu set gambar */
-          transform: translateX(-50%);
-        }
-      }
-
-      @keyframes scroll-reverse {
-        from {
-          transform: translateX(-50%);
-        }
-        to {
-          transform: translateX(0);
-        }
-      }
-
-      .marquee-wrapper:hover .marquee-content {
-        animation-play-state: paused;
-      }
-    </style>
   </head>
 
   <body>

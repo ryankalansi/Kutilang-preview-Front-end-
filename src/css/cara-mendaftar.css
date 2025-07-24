@@ -5,13 +5,13 @@
  */
 
 /* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
-main > section:first-of-type {
-  margin-top: 5rem;
-}
 
 /* Section Styling Umum */
 .registration-steps-section {
   background-color: var(--background-light);
+  margin-top: 4.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .registration-form-section {

@@ -5,13 +5,12 @@
  */
 
 /* Memberi jarak atas pada section pertama agar tidak tertutup navbar */
-main > section:first-of-type {
-  margin-top: 5rem;
-}
 
 /* Header Halaman */
 .page-header-section {
-  padding: 5rem 0;
+  margin-top: 4.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background: var(--accent-orange);
 }
 
