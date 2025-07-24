@@ -1,27 +1,30 @@
 .hero-section {
   background: var(--accent-orange);
-  margin-top: 4.5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-top: 4rem;
+  padding: 3rem 0;
 }
 .marquee-section {
   padding: 3rem 0;
+  position: relative;
 }
 .marquee-wrapper {
   overflow: hidden;
-  display: flex;
   position: relative;
   width: 100%;
   user-select: none;
+  cursor: grab;
+}
+.marquee-wrapper:active {
+  cursor: grabbing;
 }
 .marquee-content {
   display: flex;
   flex-shrink: 0;
-  /* Perubahan 1: Hapus justify-content & min-width */
-  animation: scroll 60s linear infinite;
+  width: max-content;
+  animation: scroll 120s linear infinite;
 }
 .marquee-content.reverse {
-  animation-name: scroll-reverse;
+  animation: scroll-reverse 120s linear infinite;
 }
 .marquee-content img {
   height: 250px;
@@ -30,32 +33,89 @@
   border-radius: 1rem;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 .marquee-content img:hover {
   transform: scale(1.05);
 }
-
-/* Perubahan 2: Logika keyframes diubah agar seamless */
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    /* Bergerak sejauh 50% dari total lebar elemen ini */
-    /* Karena isinya diduplikasi, 50% adalah lebar satu set gambar */
-    transform: translateX(-50%);
+  100% {
+    transform: translateX(calc(-100% / 2));
   }
 }
-
 @keyframes scroll-reverse {
-  from {
-    transform: translateX(-50%);
+  0% {
+    transform: translateX(calc(-100% / 2));
   }
-  to {
+  100% {
     transform: translateX(0);
   }
 }
-
 .marquee-wrapper:hover .marquee-content {
   animation-play-state: paused;
+}
+
+/* MODAL STYLES */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  animation: fadeIn 0.3s ease;
+}
+.image-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.modal-close:hover {
+  color: var(--accent-orange);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.footer-section {
+  background: #333;
+  color: white;
+}
+.footer-copyright {
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .marquee-content img {
+    height: 200px;
+    margin: 0 0.5rem;
+  }
 }
