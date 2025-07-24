@@ -22,6 +22,7 @@
   flex-shrink: 0;
   width: max-content;
   animation: scroll 120s linear infinite;
+  will-change: transform;
 }
 .marquee-content.reverse {
   animation: scroll-reverse 120s linear infinite;
