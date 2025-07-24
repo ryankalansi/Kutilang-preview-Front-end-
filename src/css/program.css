@@ -37,11 +37,6 @@ main > section {
   height: 100%;
 }
 
-.program-card-custom:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 1rem 2rem var(--black-15-opacity);
-}
-
 .program-card-custom .card-body {
   display: flex;
   flex-direction: column;

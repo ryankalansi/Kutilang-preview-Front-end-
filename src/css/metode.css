@@ -40,11 +40,6 @@ main > section {
   height: 100%;
 }
 
-.sentra-card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 1rem 2rem var(--black-08-opacity);
-}
-
 .sentra-card-custom .card-body {
   display: flex;
   flex-direction: column;
