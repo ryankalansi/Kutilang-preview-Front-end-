@@ -71,12 +71,8 @@ h6 {
 }
 
 /* === NAVBAR === */
-.navbar {
-  background-color: var(--white-85-opacity);
-  backdrop-filter: blur(0.625rem);
-}
 .logo {
-  max-height: 3.125rem;
+  height: 50px;
 }
 .nav-link {
   font-weight: 600;
@@ -110,10 +106,8 @@ h6 {
 
 /* === HERO SECTION === */
 .hero-section {
-  padding: 2rem 0;
   background: var(--tk-blue);
   color: var(--white);
-  margin-top: 4rem;
 }
 .hero-title {
   color: var(--white);
@@ -154,7 +148,6 @@ h6 {
 
 /* === FEATURES SECTION (TATA NILAI) === */
 .features-section {
-  padding: 5rem 0;
   background-color: var(--background-light);
 }
 .section-title {
@@ -162,9 +155,6 @@ h6 {
 }
 .section-subtitle {
   color: var(--secondary-text);
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .feature-card {
   background-color: var(--background-grey);
@@ -227,7 +217,6 @@ h6 {
 /* === SENTRA & VIDEO SECTION === */
 .sentra-video-section {
   background-color: var(--background-soft);
-  padding: 5rem 0;
 }
 .sentra-badge {
   font-size: 0.9rem;
@@ -261,7 +250,6 @@ h6 {
 }
 
 .cta-section {
-  padding: 5rem 0;
   background: var(--accent-orange);
 }
 .cta-title,
