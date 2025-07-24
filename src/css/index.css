@@ -72,8 +72,8 @@ h6 {
 
 /* === NAVBAR === */
 .navbar {
-  background-color: var(--white-85-opacity);
-  backdrop-filter: blur(0.625rem);
+  background-color: var(--white-90-opacity);
+  backdrop-filter: blur(1rem);
 }
 .logo {
   max-height: 3.125rem;
