@@ -104,7 +104,7 @@ h6 {
   transition: all 0.2s ease;
 }
 .dropdown-item:hover {
-  background: var(--accent-purple);
+  background: var(--accent-blue);
   color: var(--white);
   transform: translateX(5px);
 }

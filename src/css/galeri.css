@@ -109,13 +109,6 @@
     opacity: 1;
   }
 }
-.footer-section {
-  background: #333;
-  color: white;
-}
-.footer-copyright {
-  margin: 0;
-}
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
