@@ -41,6 +41,7 @@
     var(--tk-yellow) 100%
   );
   --accent-purple: linear-gradient(135deg, #b97bd9 0%, #a86cc7 100%);
+  --accent-blue: linear-gradient(135deg, #00b4d8 0%, #0096c7 100%);
 }
 
 /* === PENGATURAN DASAR & FIX === */
@@ -83,11 +84,11 @@ h6 {
   color: var(--primary-text) !important;
   padding: 0.5rem 1rem;
   border-radius: 0.75rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .nav-link:hover,
 .nav-link.active {
-  background: var(--accent-orange);
+  background: var(--accent-blue);
   color: var(--white) !important;
 }
 .dropdown-menu {

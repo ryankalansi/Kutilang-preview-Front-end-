@@ -11,7 +11,11 @@
   margin-top: 4.5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background: var(--accent-orange);
+  background: var(--tk-blue);
+}
+
+.hero-section h1 {
+  color: var(--white);
 }
 
 /* Bagian Informasi Kontak */

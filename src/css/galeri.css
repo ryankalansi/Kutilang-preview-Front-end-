@@ -1,7 +1,11 @@
 .hero-section {
-  background: var(--accent-orange);
+  background: var(--tk-blue);
   margin-top: 4rem;
   padding: 3rem 0;
+}
+
+.hero-section h1 {
+  color: var(--white);
 }
 .marquee-section {
   padding: 3rem 0;
