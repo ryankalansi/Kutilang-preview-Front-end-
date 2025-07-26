@@ -53,6 +53,10 @@ main > section {
   font-weight: 700;
 }
 
+.sentra-text {
+  font-size: 1.1rem;
+}
+
 /* Warna border kiri yang berbeda untuk setiap sentra */
 #bahan-alam .sentra-card-custom {
   border-left-color: var(--tk-green);
