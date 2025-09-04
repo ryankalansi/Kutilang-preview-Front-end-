@@ -124,7 +124,7 @@ h6 {
   color: var(--white-90-opacity);
 }
 .carousel-inner img {
-  aspect-ratio: 7/5;
+  /* aspect-ratio: 4/5; */
   object-fit: cover;
 }
 .btn-primary-custom {
@@ -190,6 +190,13 @@ h6 {
   margin: 0 auto 1.5rem auto;
   box-shadow: 0 4px 12px var(--black-15-opacity);
 }
+
+.feature-icon img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;
+}
+
 .feature-title {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
@@ -210,13 +217,13 @@ h6 {
   background-color: var(--tk-orange);
 }
 .icon-nilai-terbuka {
-  background-color: var(--tk-purple);
+  background-color: var(--tk-green);
 }
 .icon-nilai-prioritas {
   background-color: var(--tk-yellow);
 }
 .icon-nilai-proaktif {
-  background-color: var(--tk-green);
+  background-color: var(--tk-purple);
 }
 .icon-nilai-kerjasama {
   background-color: var(--tk-dark-blue);

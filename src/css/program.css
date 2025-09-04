@@ -66,6 +66,18 @@ main > section {
   color: var(--secondary-text);
 }
 
+.card-body ul {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0.2rem;
+}
+
+.card-body li {
+  list-style-position: inside;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-text);
+}
+
 /* Warna border kiri yang berbeda untuk setiap program */
 #poma .program-card-custom {
   border-left-color: var(--tk-orange);

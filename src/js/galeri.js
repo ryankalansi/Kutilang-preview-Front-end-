@@ -1,104 +1,105 @@
 document.addEventListener("DOMContentLoaded", () => {
-  class MarqueeController {
+  class GalleryController {
     constructor() {
-      this.marquees = [];
-      this.init();
-    }
-
-    init() {
-      const marqueeWrappers = document.querySelectorAll(".marquee-wrapper");
-
-      marqueeWrappers.forEach((wrapper) => {
-        const marqueeContent = wrapper.querySelector(".marquee-content");
-
-        const marqueeData = {
-          wrapper,
-          content: marqueeContent,
-          isDragging: false,
-          startX: 0,
-          currentTransform: 0,
-          // Menandai apakah user sudah berinteraksi (menggeser)
-          hasBeenInteracted: false,
-        };
-
-        // Mengambil nilai transform awal dari animasi
-        const style = window.getComputedStyle(marqueeContent);
-        const matrix = new DOMMatrix(style.transform);
-        marqueeData.currentTransform = matrix.m41;
-
-        this.marquees.push(marqueeData);
-        this.setupEventListeners(marqueeData);
-      });
-
+      this.initGalleries();
       this.setupImageModal();
     }
 
-    setupEventListeners(marquee) {
-      const startDrag = (e) => {
-        // Jika ini interaksi pertama, hentikan animasi secara permanen
-        if (!marquee.hasBeenInteracted) {
-          // 1. Dapatkan posisi transform saat ini
-          const currentStyle = window.getComputedStyle(marquee.content);
-          const currentTransformMatrix = new DOMMatrix(currentStyle.transform);
-          marquee.currentTransform = currentTransformMatrix.m41;
+    initGalleries() {
+      const gallerySections = document.querySelectorAll(".gallery-section");
 
-          // 2. Hapus animasi dari CSS
-          marquee.content.style.animation = "none";
+      gallerySections.forEach((section) => {
+        const gallery = {
+          track: section.querySelector(".gallery-track"),
+          prevButton: section.querySelector(".prev-arrow"),
+          nextButton: section.querySelector(".next-arrow"),
+          images: section.querySelectorAll(".gallery-track img"),
+          currentIndex: 0,
+          scrollAmount: 0,
+        };
 
-          // 3. Terapkan posisi terakhir sebagai style inline agar tidak reset
-          marquee.content.style.transform = `translateX(${marquee.currentTransform}px)`;
-
-          marquee.hasBeenInteracted = true;
-        }
-
-        marquee.isDragging = true;
-        marquee.startX = e.pageX || e.touches[0].pageX;
-        marquee.wrapper.style.cursor = "grabbing";
-      };
-
-      const duringDrag = (e) => {
-        if (!marquee.isDragging) return;
-        e.preventDefault();
-
-        const x = e.pageX || e.touches[0].pageX;
-        const walk = x - marquee.startX;
-        marquee.content.style.transform = `translateX(${
-          marquee.currentTransform + walk
-        }px)`;
-      };
-
-      const endDrag = (e) => {
-        if (!marquee.isDragging) return;
-        marquee.isDragging = false;
-        marquee.wrapper.style.cursor = "grab";
-
-        // Simpan posisi transform terakhir setelah selesai menggeser
-        const x = e.pageX || e.changedTouches[0].pageX;
-        const walk = x - marquee.startX;
-        marquee.currentTransform += walk;
-      };
-
-      // Mouse events
-      marquee.wrapper.addEventListener("mousedown", startDrag);
-      marquee.wrapper.addEventListener("mousemove", duringDrag);
-      document.addEventListener("mouseup", endDrag); // Gunakan document agar tidak bug saat mouse keluar wrapper
-      marquee.wrapper.addEventListener("mouseleave", (e) => {
-        // Jika mouse dilepas di luar area, akhiri juga proses drag
-        if (marquee.isDragging) {
-          endDrag(e);
+        if (gallery.images.length > 0) {
+          const firstImage = gallery.images[0];
+          if (firstImage.complete) {
+            this.calculateScrollAmount(gallery);
+            this.setupEventListeners(gallery);
+          } else {
+            firstImage.onload = () => {
+              this.calculateScrollAmount(gallery);
+              this.setupEventListeners(gallery);
+            };
+          }
         }
       });
-
-      // Touch events
-      marquee.wrapper.addEventListener("touchstart", startDrag, {
-        passive: true,
-      });
-      marquee.wrapper.addEventListener("touchmove", duringDrag, {
-        passive: false,
-      });
-      marquee.wrapper.addEventListener("touchend", endDrag);
     }
 
+    calculateScrollAmount(gallery) {
+      const imageStyle = window.getComputedStyle(gallery.images[0]);
+      const imageWidth = gallery.images[0].offsetWidth;
+      const margin =
+        parseFloat(imageStyle.marginLeft) + parseFloat(imageStyle.marginRight);
+      gallery.scrollAmount = imageWidth + margin;
+      this.updateArrows(gallery);
+    }
+
+    setupEventListeners(gallery) {
+      gallery.nextButton.addEventListener("click", () => {
+        this.move(gallery, "next");
+      });
+
+      gallery.prevButton.addEventListener("click", () => {
+        this.move(gallery, "prev");
+      });
+    }
+
+    move(gallery, direction) {
+      if (direction === "next") {
+        gallery.currentIndex++;
+      } else if (direction === "prev") {
+        gallery.currentIndex--;
+      }
+
+      // *** INI BAGIAN PENTING YANG DIPERBAIKI ***
+      const containerWidth = gallery.track.parentElement.offsetWidth;
+      const trackWidth = gallery.track.scrollWidth;
+      const maxScroll = trackWidth - containerWidth;
+
+      let newTransform = -gallery.currentIndex * gallery.scrollAmount;
+
+      // Jangan biarkan scroll melebihi batas maksimumnya untuk menghindari gap
+      if (Math.abs(newTransform) > maxScroll) {
+        newTransform = -maxScroll;
+      }
+      // *** AKHIR DARI PERBAIKAN ***
+
+      gallery.track.style.transform = `translateX(${newTransform}px)`;
+      this.updateArrows(gallery);
+    }
+
+    updateArrows(gallery) {
+      // Tombol 'prev' dinonaktifkan jika di paling awal
+      gallery.prevButton.disabled = gallery.currentIndex <= 0;
+
+      // Logika baru untuk menonaktifkan tombol 'next'
+      const containerWidth = gallery.track.parentElement.offsetWidth;
+      const trackWidth = gallery.track.scrollWidth;
+      const maxScroll = trackWidth - containerWidth;
+
+      // Mengambil posisi transform saat ini secara akurat
+      const currentTransform = this.getCurrentTransformX(gallery.track);
+
+      // Nonaktifkan tombol 'next' jika sudah mentok atau sangat dekat dengan batas akhir
+      gallery.nextButton.disabled = Math.abs(currentTransform) >= maxScroll - 1; // Toleransi 1px
+    }
+
+    // Fungsi bantuan untuk mendapatkan nilai translateX dari style transform
+    getCurrentTransformX(element) {
+      const style = window.getComputedStyle(element);
+      const matrix = new DOMMatrix(style.transform);
+      return matrix.m41;
+    }
+
+    // FUNGSI MODAL (TIDAK BERUBAH)
     setupImageModal() {
       const modal = document.getElementById("imageModal");
       if (!modal) return;
@@ -106,9 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const modalImg = document.getElementById("modalImage");
       const closeBtn = document.getElementById("modalClose");
 
-      document.querySelectorAll(".marquee-content img").forEach((img) => {
-        img.addEventListener("click", (e) => {
-          e.stopPropagation();
+      document.querySelectorAll(".gallery-track img").forEach((img) => {
+        img.addEventListener("click", () => {
           modal.classList.add("show");
           modalImg.src = img.src;
           modalImg.alt = img.alt;
@@ -135,5 +135,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  new MarqueeController();
+  window.addEventListener("load", () => {
+    new GalleryController();
+  });
+});
+
+// --- Fungsionalitas Audio ---
+const audio = document.getElementById("backgroundAudio");
+const audioToggleButton = document.getElementById("audioToggle");
+let isPlaying = false; // Status awal: tidak memutar
+
+audioToggleButton.addEventListener("click", () => {
+  // Balik status setiap kali diklik
+  isPlaying = !isPlaying;
+
+  if (isPlaying) {
+    // Jika sekarang harusnya memutar
+    audio
+      .play()
+      .then(() => {
+        // Berhasil memutar, ganti ikon ke 'volume up'
+        audioToggleButton.innerHTML = '<i class="bi bi-volume-up"></i>';
+      })
+      .catch((error) => {
+        // Gagal memutar (karena diblokir browser, dll)
+        console.warn("Pemutaran audio diblokir:", error);
+        isPlaying = false; // Kembalikan status karena gagal
+        audioToggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+      });
+  } else {
+    // Jika sekarang harusnya berhenti
+    audio.pause();
+    // Ganti ikon kembali ke 'volume mute'
+    audioToggleButton.innerHTML = '<i class="bi bi-volume-mute"></i>';
+  }
 });

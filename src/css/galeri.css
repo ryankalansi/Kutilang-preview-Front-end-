@@ -7,31 +7,23 @@
 .hero-section h1 {
   color: var(--white);
 }
-.marquee-section {
+/* GAYA BARU UNTUK GALERI SLIDER */
+.gallery-section {
   padding: 3rem 0;
-  position: relative;
+  position: relative; /* Diperlukan untuk posisi panah */
 }
-.marquee-wrapper {
+.gallery-container {
+  width: 90%; /* Memberi sedikit ruang di sisi untuk panah */
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 100%;
-  user-select: none;
-  cursor: grab;
 }
-.marquee-wrapper:active {
-  cursor: grabbing;
-}
-.marquee-content {
+.gallery-track {
   display: flex;
-  flex-shrink: 0;
-  width: max-content;
-  animation: scroll 120s linear infinite;
+  transition: transform 0.5s ease-in-out; /* Animasi geser */
   will-change: transform;
 }
-.marquee-content.reverse {
-  animation: scroll-reverse 120s linear infinite;
-}
-.marquee-content img {
+.gallery-track img {
   height: 250px;
   width: auto;
   margin: 0 1rem;
@@ -39,32 +31,49 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
-  flex-shrink: 0;
+  flex-shrink: 0; /* Mencegah gambar menyusut */
 }
-.marquee-content img:hover {
+.gallery-track img:hover {
   transform: scale(1.05);
 }
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-100% / 2));
-  }
+
+/* GAYA UNTUK TOMBOL PANAH */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, color 0.3s;
 }
-@keyframes scroll-reverse {
-  0% {
-    transform: translateX(calc(-100% / 2));
-  }
-  100% {
-    transform: translateX(0);
-  }
+.arrow:hover {
+  background-color: white;
+  color: black;
 }
-.marquee-wrapper:hover .marquee-content {
-  animation-play-state: paused;
+.prev-arrow {
+  left: 2%; /* Posisi panah kiri */
+}
+.next-arrow {
+  right: 2%; /* Posisi panah kanan */
+}
+.arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
-/* MODAL STYLES */
+/* GAYA MODAL (TIDAK BERUBAH) */
 .image-modal {
   display: none;
   position: fixed;
@@ -99,7 +108,7 @@
   transition: color 0.3s ease;
 }
 .modal-close:hover {
-  color: var(--accent-orange);
+  color: #ff8c00; /* Ganti dengan var(--accent-orange) jika Anda punya */
 }
 @keyframes fadeIn {
   from {
@@ -110,10 +119,63 @@
   }
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE (TIDAK BERUBAH) */
 @media (max-width: 768px) {
-  .marquee-content img {
+  .gallery-track img {
     height: 200px;
     margin: 0 0.5rem;
   }
+  .arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .prev-arrow {
+    left: 1%;
+  }
+  .next-arrow {
+    right: 1%;
+  }
+}
+
+.kutilang-fair .container,
+.ekspresi-seni .container,
+.buku-tahunan .container {
+  max-width: 1080px;
+}
+
+/* Gaya Tombol Audio */
+.audio-toggle {
+  position: fixed; /* Membuat tombol tetap di posisi tertentu */
+  bottom: 20px; /* Jarak dari bawah */
+  right: 20px; /* Jarak dari kanan */
+  z-index: 10000; /* Pastikan tombol di atas elemen lain */
+  background-color: #00b4d8; /* Warna biru Bootstrap */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Bentuk bulat */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.audio-toggle:hover {
+  background-color: #00b4d8; /* Warna biru lebih gelap saat hover */
+  transform: scale(1.05);
+}
+
+.audio-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Gaya ikon untuk mode pause/mute (opsional) */
+.audio-toggle .fa-volume-mute {
+  /* Contoh gaya jika ingin ikon mute terlihat berbeda */
+  color: #ccc; /* Agak redup */
 }

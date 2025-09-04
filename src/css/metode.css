@@ -57,6 +57,17 @@ main > section {
   font-size: 1.1rem;
 }
 
+.card-body ul {
+  margin-left: 0;
+  padding-left: 0;
+  padding-top: 0.2rem;
+}
+
+.card-body li {
+  list-style-position: inside;
+  margin-bottom: 0.5rem;
+}
+
 /* Warna border kiri yang berbeda untuk setiap sentra */
 #bahan-alam .sentra-card-custom {
   border-left-color: var(--tk-green);
