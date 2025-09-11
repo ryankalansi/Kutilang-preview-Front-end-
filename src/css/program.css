@@ -24,7 +24,7 @@ main > section {
 }
 
 .carousel-item img {
-  aspect-ratio: 7/5;
+  aspect-ratio: 4/3;
   object-fit: cover;
 }
 
@@ -76,6 +76,7 @@ main > section {
   list-style-position: inside;
   margin-bottom: 0.5rem;
   color: var(--secondary-text);
+  font-size: 1.1rem;
 }
 
 /* Warna border kiri yang berbeda untuk setiap program */

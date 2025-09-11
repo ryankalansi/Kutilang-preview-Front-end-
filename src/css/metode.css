@@ -66,6 +66,7 @@ main > section {
 .card-body li {
   list-style-position: inside;
   margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 /* Warna border kiri yang berbeda untuk setiap sentra */
