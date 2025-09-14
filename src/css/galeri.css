@@ -7,6 +7,10 @@
 .hero-section h1 {
   color: var(--white);
 }
+
+p {
+  font-size: 1.2rem;
+}
 /* GAYA BARU UNTUK GALERI SLIDER */
 .gallery-section {
   padding: 3rem 0;
