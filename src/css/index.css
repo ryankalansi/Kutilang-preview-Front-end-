@@ -7,7 +7,9 @@
   --tk-purple: #b97bd9;
   --tk-yellow: #ff9e00;
   --tk-green: #28a745;
-  --tk-dark-blue: #0d6efd;
+  --tk-dark-blue: #0249bf;
+  --tk-red: #cc1e32;
+  --tk-yellow-soft: #f2cc49;
 
   /* Variabel Pendukung */
   --font-heading: "Poppins", sans-serif;
@@ -243,23 +245,22 @@ h6 {
   box-shadow: 0 2px 8px var(--black-10-opacity);
 }
 .badge-bahan-alam {
-  background-color: var(--tk-green);
-}
-.badge-seni {
-  background-color: var(--tk-pink);
-}
-.badge-balok {
-  background-color: var(--tk-blue);
-}
-.badge-persiapan {
-  background-color: var(--tk-yellow);
-  color: var(--primary-text);
-}
-.badge-imtaq {
   background-color: var(--tk-dark-blue);
 }
+.badge-seni {
+  background-color: var(--tk-yellow-soft);
+}
+.badge-balok {
+  background-color: var(--tk-red);
+}
+.badge-persiapan {
+  background-color: var(--tk-orange);
+}
+.badge-imtaq {
+  background-color: var(--tk-green);
+}
 .badge-peran {
-  background-color: var(--tk-purple);
+  background-color: var(--tk-dark-blue);
 }
 .badge-memasak {
   background-color: var(--tk-orange);
@@ -367,6 +368,9 @@ h6 {
   margin-top: 5px;
   color: var(--tk-orange);
 }
+.footer-contact a {
+  color: var(--white-70-opacity);
+}
 .social-icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -383,6 +387,7 @@ h6 {
   background-color: var(--tk-orange);
   transform: translateY(-3px);
 }
+
 .footer-divider {
   border-top: 1px solid var(--white-20-opacity);
   margin: 2rem 0 1rem 0;

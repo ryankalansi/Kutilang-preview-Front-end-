@@ -71,22 +71,22 @@ main > section {
 
 /* Warna border kiri yang berbeda untuk setiap sentra */
 #bahan-alam .sentra-card-custom {
-  border-left-color: var(--tk-green);
-}
-#seni .sentra-card-custom {
-  border-left-color: var(--tk-pink);
-}
-#balok .sentra-card-custom {
-  border-left-color: var(--tk-blue);
-}
-#persiapan .sentra-card-custom {
-  border-left-color: var(--tk-yellow);
-}
-#imtaq .sentra-card-custom {
   border-left-color: var(--tk-dark-blue);
 }
+#seni .sentra-card-custom {
+  border-left-color: var(--tk-yellow-soft);
+}
+#balok .sentra-card-custom {
+  border-left-color: var(--tk-red);
+}
+#persiapan .sentra-card-custom {
+  border-left-color: var(--tk-orange);
+}
+#imtaq .sentra-card-custom {
+  border-left-color: var(--tk-green);
+}
 #peran .sentra-card-custom {
-  border-left-color: var(--tk-purple);
+  border-left-color: var(--tk-dark-blue);
 }
 #memasak .sentra-card-custom {
   border-left-color: var(--tk-orange);
